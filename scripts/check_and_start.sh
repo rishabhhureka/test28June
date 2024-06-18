@@ -8,6 +8,8 @@ print_message() {
     local timestamp="$(date +"%Y-%m-%d %H:%M:%S")"
     echo "$timestamp - $message"
 }
+cd "$BASE_DIR/mtap-nextjs/" || exit
+npm install
 
 # Start port check and app monitoring
 print_message "Starting port check and app monitoring..."
