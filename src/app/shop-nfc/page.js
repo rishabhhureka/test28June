@@ -109,7 +109,7 @@ const products = [
   {
     id: 4,
     name: "mTap Table Stand",
-    href: "/shop-nfc/mtap-table-stand",
+    href: "/shop-nfc/mtap-retail-solutions",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/mTap-Table-Stand.png?itok=lOGFZzc2",
     imageAlt: "Cards",

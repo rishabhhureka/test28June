@@ -54,9 +54,9 @@ import Link from 'next/link';
   const productData = {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Google Review Cards",
-    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png",
-    "description": "Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
+    "name": "mTap Key Fobs",
+    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2023-04/blue-keyfob.webp",
+    "description": "Elevate your Business strategy with the  mTap Key Fobs component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
     "sku": "GRC12345",
     "brand": {
       "@type": "Brand",
@@ -64,9 +64,9 @@ import Link from 'next/link';
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://mtap.byklabs.store/product",
+      "url": "https://mtap.byklabs.store/shop-nfc/mtap-key-fobs",
       "priceCurrency": "USD",
-      "price": "39.00",
+      "price": "24.99",
       "availability": "https://schema.org/InStock"
     },
     "aggregateRating": {
@@ -91,7 +91,7 @@ import Link from 'next/link';
   };
   
 const KeyFobs = ({ product }) => {
-    const [quantity, setQuantity] = useState(1);
+  
     const [count, setCount] = useState(1);
 
     const images = product.images.map((image, index) => ({ src: image.src, alt: product.name }));
@@ -145,9 +145,7 @@ const KeyFobs = ({ product }) => {
       }
     };
   
-    const handleQuantityChange = (event) => {
-      setQuantity(event.target.value);
-    };
+
     const faqScript = `{
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -207,10 +205,10 @@ const KeyFobs = ({ product }) => {
     <Head>
     <title>mTap Key Fobs</title>
     <meta property="og:site_name" content="mTap" />
-    <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs." />
-    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />
+    <meta name="description" content="Elevate your Business strategy with the mTap Key Fobs component. " />
+    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2023-04/blue-keyfob.webp" />
+    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2023-04/blue-keyfob.webp" />
+    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, mTap Key Fobs" />
 
     <script type="application/ld+json">
       {JSON.stringify({

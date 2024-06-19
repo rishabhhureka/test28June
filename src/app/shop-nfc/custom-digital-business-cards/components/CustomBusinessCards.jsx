@@ -54,9 +54,9 @@ import Link from 'next/link';
   const productData = {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Google Review Cards",
-    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png",
-    "description": "Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
+    "name": "Custom Business Cards",
+    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-03/mTap%20Black%20Digital%20Business%20Card05.png",
+    "description": "Elevate your Business strategy with the Custom Business Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
     "sku": "GRC12345",
     "brand": {
       "@type": "Brand",
@@ -64,9 +64,9 @@ import Link from 'next/link';
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://mtap.byklabs.store/product",
+      "url": "https://mtap.byklabs.store/shop-nfc/custom-digital-business-cards",
       "priceCurrency": "USD",
-      "price": "39.00",
+      "price": "24.99",
       "availability": "https://schema.org/InStock"
     },
     "aggregateRating": {
@@ -210,12 +210,12 @@ const CustomBusinessCards = ({ product }) => {
   return (
     <>
     <Head>
-    <title>Google Review Cards</title>
+    <title>Custom Business Cards</title>
     <meta property="og:site_name" content="mTap" />
-    <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs." />
-    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />
+    <meta name="description" content="Elevate your Business strategy with the Custom Business Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs." />
+    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-03/mTap%20Black%20Digital%20Business%20Card05.png" />
+    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-03/mTap%20Black%20Digital%20Business%20Card05.png" />
+    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Custom Business Cards" />
 
     <script type="application/ld+json">
       {JSON.stringify({
