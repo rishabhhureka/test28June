@@ -18,7 +18,7 @@ const allProducts = [
   {
     id: 2,
     name: "Metal Cards",
-    href: "/shop-nfc/metal-cards",
+    href: "/shop-nfc/nfc-black-metal-card",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/Metal-Card-Landing-Page-Image.png?itok=ghG4ckL_",
     imageAlt: "Cards",
@@ -93,7 +93,7 @@ const products = [
   {
     id: 1,
     name: "NFC Black Metal Cards",
-    href: `/shop-nfc/metal-cards`,
+    href: `/shop-nfc/nfc-black-metal-card`,
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/Metal-Card-Landing-Page-Image.png?itok=ghG4ckL_",
     imageAlt: "Cards",
