@@ -193,7 +193,7 @@ Never run out of space again to promote your products and store with mTap Table 
                   <div className="mt-16 mb-16 flex justify-center">
                     <div style={{display:'flex',flexDirection:'column',gap:'2rem'}}>
                       <h3 className="text-2xl font-bold text-gray-700 text-center" >
-                        <Link href={product.href}>
+                      <Link href={`/shop-nfc/mtap-retail-solutions/${product.id}`} key={product.id}>
                           <span
                             aria-hidden="true"
                             className="absolute inset-0"
