@@ -4,23 +4,19 @@ import {
   Box,
   Card,
   CardContent,
-  FormControl,
-  FormControlLabel,
+
   Grid,
   IconButton,
-  InputLabel,
-  MenuItem,
-  Radio,
+
+
   Button,
-  RadioGroup,
-  Select,
-  TextField,
+
   Typography,
 } from '@mui/material';
-import Done from '@mui/icons-material/Done';
+
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Image from 'next/image';
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -54,9 +50,9 @@ import Link from 'next/link';
   const productData = {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Google Review Cards",
+    "name": "mTap Collections",
     "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png",
-    "description": "Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
+    "description": "Elevate your Business strategy with the mTap Collections component.",
     "sku": "GRC12345",
     "brand": {
       "@type": "Brand",
@@ -64,9 +60,9 @@ import Link from 'next/link';
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://mtap.byklabs.store/product",
+      "url": "https://mtap.byklabs.store/shop-nfc/mtap-collections",
       "priceCurrency": "USD",
-      "price": "39.00",
+      "price": "34.18",
       "availability": "https://schema.org/InStock"
     },
     "aggregateRating": {
@@ -91,7 +87,7 @@ import Link from 'next/link';
   };
   
 const Collections = ({ product }) => {
-    const [quantity, setQuantity] = useState(1);
+    
     const [count, setCount] = useState(1);
 
     const images = product.images.map((image, index) => ({ src: image.src, alt: product.name }));
@@ -145,9 +141,7 @@ const Collections = ({ product }) => {
       }
     };
   
-    const handleQuantityChange = (event) => {
-      setQuantity(event.target.value);
-    };
+
     const faqScript = `{
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -205,12 +199,12 @@ const Collections = ({ product }) => {
   return (
     <>
     <Head>
-    <title>mTap Key Fobs</title>
+    <title>mTap Collections</title>
     <meta property="og:site_name" content="mTap" />
-    <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs." />
-    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />
+    <meta name="description" content="Elevate your Business strategy with the mTap Collections component." />
+    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2021-12/mTap%20Maven1.jpg" />
+    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2021-12/mTap%20Maven1.jpg" />
+    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, mtap Collections" />
 
     <script type="application/ld+json">
       {JSON.stringify({

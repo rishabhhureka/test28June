@@ -79,7 +79,7 @@ const Header = () => {
        
         </p>
      <p className="menu-item">
-     <Link href="/shop-nfc/metal-cards">NFC Black Metal Card</Link>
+     <Link href="/shop-nfc/nfc-black-metal-card">NFC Black Metal Card</Link>
      </p>
      <p className="menu-item">
      <Link href="/shop-nfc/mtap-key-fobs">mTap Key Fobs</Link>

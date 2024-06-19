@@ -48,9 +48,9 @@ import Link from 'next/link';
   const productData = {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Google Review Cards",
-    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png",
-    "description": "Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
+    "name": "Wrist Bands",
+    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-06/mtap-wrist-bands_0.png",
+    "description": "Elevate your Business strategy with the Wrist Bands component.",
     "sku": "GRC12345",
     "brand": {
       "@type": "Brand",
@@ -58,9 +58,9 @@ import Link from 'next/link';
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://mtap.byklabs.store/product",
+      "url": "https://mtap.byklabs.store/shop-nfc/wrist-bands",
       "priceCurrency": "USD",
-      "price": "39.00",
+      "price": "29.00",
       "availability": "https://schema.org/InStock"
     },
     "aggregateRating": {
@@ -197,12 +197,12 @@ const WristBands = ({ product }) => {
   return (
     <>
     <Head>
-    <title> WristBands</title>
+    <title> Wrist Bands</title>
     <meta property="og:site_name" content="mTap" />
-    <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs." />
-    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />
+    <meta name="description" content="Elevate your Business strategy with the Wrist Bands component." />
+    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-06/mtap-wrist-bands_0.png" />
+    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-06/mtap-wrist-bands_0.png" />
+    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Wrist Bands" />
 
     <script type="application/ld+json">
       {JSON.stringify({

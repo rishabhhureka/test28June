@@ -54,9 +54,9 @@ import Link from 'next/link';
   const productData = {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Google Review Cards",
-    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png",
-    "description": "Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
+    "name": "NFC Black Metal Cards",
+    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/mTap-Metal-Card-4.png",
+    "description": "Elevate your Business strategy with the NFC Black Metal Cards component.",
     "sku": "GRC12345",
     "brand": {
       "@type": "Brand",
@@ -64,9 +64,9 @@ import Link from 'next/link';
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://mtap.byklabs.store/product",
+      "url": "https://mtap.byklabs.store/shop-nfc/nfc-black-metal-card",
       "priceCurrency": "USD",
-      "price": "39.00",
+      "price": "69.00",
       "availability": "https://schema.org/InStock"
     },
     "aggregateRating": {
@@ -210,12 +210,12 @@ const MetalCards = ({ product }) => {
   return (
     <>
     <Head>
-    <title>Google Review Cards</title>
+    <title>NFC Black Metal Cards</title>
     <meta property="og:site_name" content="mTap" />
-    <meta name="description" content="Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs." />
-    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png" />
-    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards" />
+    <meta name="description" content="Elevate your Business strategy with the NFC Black Metal Cards component." />
+    <meta property="og:image" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/mTap-Metal-Card-1.png" />
+    <meta property="og:image:url" content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/mTap-Metal-Card-1.png" />
+    <meta name="keywords" content="product, ecommerce, User engagement, SEO-friendly, NFC Black Metal Cards" />
 
     <script type="application/ld+json">
       {JSON.stringify({

@@ -61,9 +61,9 @@ const productData = {
   },
   offers: {
     "@type": "Offer",
-    url: "https://mtap.byklabs.store/product",
+    url: "https://mtap.byklabs.store/shop-nfc/mtap-retail-solutions",
     priceCurrency: "USD",
-    price: "39.00",
+    price: "24.99",
     availability: "https://schema.org/InStock",
   },
   aggregateRating: {
@@ -207,19 +207,19 @@ const RetailSolutions = ({ product }) => {
         <meta property="og:site_name" content="mTap" />
         <meta
           name="description"
-          content="Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs."
+          content="Elevate your Google Review strategy with the mTap Retail Solutions component."
         />
         <meta
           property="og:image"
-          content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png"
+          content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-06/mTap%20Circle%20Flat%20Large%20with%20QR%20Code.png"
         />
         <meta
           property="og:image:url"
-          content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png"
+          content="https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2022-06/mTap%20Circle%20Flat%20Large%20with%20QR%20Code.png"
         />
         <meta
           name="keywords"
-          content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, Google Review Cards"
+          content="product, ecommerce, User engagement, SEO-friendly, Customizable colors, mTap Retail Solutions"
         />
 
         <script type="application/ld+json">
