@@ -93,7 +93,7 @@ const products = [
   {
     id: 1,
     name: "NFC Black Metal Cards",
-    href: "/shop-nfc/metal-cards",
+    href: `/shop-nfc/metal-cards`,
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/Metal-Card-Landing-Page-Image.png?itok=ghG4ckL_",
     imageAlt: "Cards",
@@ -109,7 +109,7 @@ const products = [
   {
     id: 4,
     name: "mTap Table Stand",
-    href: "#",
+    href: "/shop-nfc/mtap-table-stand",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/mTap-Table-Stand.png?itok=lOGFZzc2",
     imageAlt: "Cards",
@@ -117,15 +117,15 @@ const products = [
   {
     id: 2,
     name: "Black Digital Business Card",
-    href: "#",
+    href: "/shop-nfc/custom-digital-business-cards",
     imageSrc:
-      "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2024-04/Metal-Card-Landing-Page-Image.png?itok=ghG4ckL_",
+      "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-03/mTap%20Black%20Digital%20Business%20Card05.png",
     imageAlt: "Cards",
   },
   {
     id: 5,
     name: "mTap Key Fobs Digital Card Blue",
-    href: "#",
+    href: "/shop-nfc/mtap-key-fobs",
     imageSrc:
       "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/styles/max_325x325/public/2021-12/Keyfobs%20Blue.png?itok=1xYOx5VH",
     imageAlt: "Cards",
@@ -200,7 +200,7 @@ export default function Shop_NFC() {
                   },
                 }}
               >
-                {" "}
+               
                 Products
               </Typography>
           
@@ -295,10 +295,10 @@ export default function Shop_NFC() {
                 <div className="mt-16 mb-16 flex justify-center">
                   <div>
                     <h3 className="text-xl font-bold text-gray-700">
-                      <a href={product.href}>
+                      <Link href={product.href}>
                         <span aria-hidden="true" className="absolute inset-0" />
                         {product.name}
-                      </a>
+                      </Link>
                     </h3>
                   </div>
                 </div>
