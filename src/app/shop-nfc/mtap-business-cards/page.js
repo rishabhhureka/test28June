@@ -30,10 +30,8 @@ const mtapBusinessCards = () => {
         "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2021-12/NFC%20Enabled%20Paper%20Card3.jpg",
       imageAlt: "Custom Google Review Card",
       price: "$4.99",
-    },
+    },];
    
-   
-  ];
   return (
     <div className="cardContainer">
       {" "}

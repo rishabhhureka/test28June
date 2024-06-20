@@ -90,7 +90,49 @@ const WristBands = ({ product }) => {
 
     const images = product.images.map((image, index) => ({ src: image.src, alt: product.name }));
       const [selectedImage, setSelectedImage] = useState(images[0]);
-      console.log(selectedImage,'sjkasdkb');
+      const generateBreadcrumbSchema = () => {
+        return {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://mtap.byklabs.store",
+                },
+                {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Shop NFC",
+                    item: "https://mtap.byklabs.store/shop-nfc",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Wrist Bands",
+                  item: "https://mtap.byklabs.store/shop-nfc/wrist-bands",
+              },
+                {
+                    "@type": "ListItem",
+                    position: 4,
+                    name: product.name,
+                    item: `https://mtap.byklabs.store/shop-nfc/wrist-bands/${product.id}`,
+                },
+            ],
+        };
+    };
+    useEffect(() => {
+      const breadcrumbSchema = generateBreadcrumbSchema();
+      const breadcrumbScript = document.createElement("script");
+      breadcrumbScript.type = "application/ld+json";
+      breadcrumbScript.innerHTML = JSON.stringify(breadcrumbSchema);
+      document.head.appendChild(breadcrumbScript);
+    
+      return () => {
+          document.head.removeChild(breadcrumbScript);
+      };
+    }, [product]);
     useEffect(() => {
     const existingProductScript = document.getElementById('product-schema');
     if (existingProductScript) {

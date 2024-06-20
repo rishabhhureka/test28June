@@ -55,9 +55,9 @@ import Link from 'next/link';
   const productData = {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Google Review Cards",
-    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png",
-    "description": "Elevate your Google Review strategy with the Google Review Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
+    "name": "Custom Digital Business Cards",
+    "image": "https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-03/mTap%20Black%20Digital%20Business%20Card05.png",
+    "description": "Elevate your Business strategy with the mTap Business Cards component. Customize card colors, upload your business logo, and choose the card pack size that suits your needs.",
     "sku": "GRC12345",
     "brand": {
       "@type": "Brand",
@@ -65,7 +65,7 @@ import Link from 'next/link';
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://mtap.byklabs.store/product",
+      "url": "https://mtap.byklabs.store/shop-nfc/mtap-business-cards",
       "priceCurrency": "USD",
       "price": "39.00",
       "availability": "https://schema.org/InStock"
@@ -94,7 +94,49 @@ import Link from 'next/link';
 const ProductDetailComponent = ({ product }) => {
     const [quantity, setQuantity] = useState(1);
     const [count, setCount] = useState(1);
-
+    const generateBreadcrumbSchema = () => {
+      return {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+              {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://mtap.byklabs.store",
+              },
+              {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Shop NFC",
+                  item: "https://mtap.byklabs.store/shop-nfc",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Mtap Business Cards",
+                item: "https://mtap.byklabs.store/shop-nfc/mtap-business-cards",
+            },
+              {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: product.name,
+                  item: `https://mtap.byklabs.store/shop-nfc/mtap-business-cards/${product.id}`,
+              },
+          ],
+      };
+  };
+  useEffect(() => {
+    const breadcrumbSchema = generateBreadcrumbSchema();
+    const breadcrumbScript = document.createElement("script");
+    breadcrumbScript.type = "application/ld+json";
+    breadcrumbScript.innerHTML = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(breadcrumbScript);
+  
+    return () => {
+        document.head.removeChild(breadcrumbScript);
+    };
+  }, [product]);
     const images = [
         { src: product.imageSrc, alt: product.name },
         // Add any additional static images if needed
