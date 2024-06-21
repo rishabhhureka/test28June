@@ -421,7 +421,7 @@ export default function Teams() {
         data-v-0a07a5aa
       >
         <div className="card__content teamsCardContent" >
-          <div className="card-inner " style={{ backgroundColor: "white" ,padding:'4rem',height:'60vh'}}>
+          <div className="card-inner section3" style={{ backgroundColor: "white" ,padding:'4rem'}}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
           
