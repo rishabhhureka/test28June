@@ -204,7 +204,7 @@ export default function HomePage() {
                                     />
                                 </div>
                                 <div className="col">
-                                    <div className="text-wrp">
+                                    <div className="text-wrp texth">
                                         <h2>Make Follow Up Easy</h2>
                                         <p>
                                             Use real-time personalized follow up emails and texts. Organize and
@@ -234,7 +234,7 @@ export default function HomePage() {
                                     />
                                 </div>
                                 <div className="col">
-                                    <div className="text-wrp">
+                                    <div className="text-wrp texth">
                                         <h2>Create Your Profile in 60 Seconds</h2>
                                         <p>Populate your profile automatically with information from profiles on other platforms</p>
                                         <a href="#" className="black-btn homePageButton" aria-label="Read more about Create Your Profile">
@@ -260,7 +260,7 @@ export default function HomePage() {
                                     />
                                 </div>
                                 <div className="col">
-                                    <div className="text-wrp">
+                                    <div className="text-wrp texth">
                                         <h2>Custom <br />Branding</h2>
                                         <p>Customize your profile and digital business card by syncing your profile and digital business card with your brand colors</p>
                                         <a href="#" className="black-btn homePageButton" aria-label="Read more about Custom Branding">
@@ -286,7 +286,7 @@ export default function HomePage() {
                                     />
                                 </div>
                                 <div className="col">
-                                    <div className="text-wrp">
+                                    <div className="text-wrp texth">
                                         <h2>Connect <br />Your Team </h2>
                                         <p>Track your team’s networking efforts on the ground, and automatically upload new contacts directly to your CRM.</p>
                                         <a href="#" className="black-btn homePageButton" aria-label="Read more about Your Team">

@@ -2149,9 +2149,11 @@ display: block;
     .card-inner h2 br,
     .footer-column.footer-menu,
     .left-col-banner h2 br {
-        display: none
+        display: none;
     }
-
+.texth h2{
+    display: none !important;
+}
     .col-fix-3.active,
     .filter,
     .ms-slider {
