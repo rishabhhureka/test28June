@@ -264,7 +264,9 @@ const BlogDetails = () => {
           flexDirection: "column",
         }}
       >
-        <div style={{ width: "80%", margin: "0 auto" }}>
+        <Box sx={{ width: "80%", margin: "0 auto", "@media (max-width: 767px)": {
+                    width:'100%', padding:'1.2rem'
+                    },}}>
           {/* Breadcrumbs */}
           <div
             role="presentation"
@@ -555,8 +557,10 @@ const BlogDetails = () => {
               </CardContent>
             </Box>
           </Card>
-        </div>
-        <div style={{ width: "80%", margin: "0 auto" }}>
+        </Box>
+        <Box sx={{ width: "80%", margin: "0 auto", "@media (max-width: 767px)": {
+                    width:'100%', padding:'1.2rem'
+                    }, }}>
           <Card
             sx={{
               display: "flex",
@@ -700,7 +704,7 @@ const BlogDetails = () => {
               </CardContent>
             </Box>
           </Card>
-        </div>
+        </Box>
 
         {/* Continue reading card  */}
         <div>
@@ -728,8 +732,9 @@ const BlogDetails = () => {
             margin: "0 auto"
             ,"@media (max-width: 767px)": {
               gridTemplateColumns: "1fr", 
-              width: "80%",
-              // marginLeft:'2rem'
+              width: "100%",
+            padding:'1.2rem',
+        
                   },
           }}
         >
@@ -743,6 +748,10 @@ const BlogDetails = () => {
                 overflow: "auto",
                 marginBottom: "2rem",
                 borderRadius: 20,
+                "@media (max-width: 767px)": {
+                height:'78vh'
+            
+                      },
               }}
             >
               <CardMedia

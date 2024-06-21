@@ -289,11 +289,12 @@ const CustomBusinessCards = ({ product }) => {
               marginTop: "2rem",
               marginLeft: "4rem",
         marginBottom:'1rem',
+
               border: "1px solid transparent",
               backgroundColor: "transparent",
               "@media (max-width: 767px)": {
                 marginLeft: "0rem",
-           
+        
               },
             }}
           >
@@ -319,7 +320,7 @@ const CustomBusinessCards = ({ product }) => {
                     color: "white", // Change text color on hover
                   },
                   "@media (max-width: 767px)": {
-                    fontSize: "20px",
+                    fontSize: "20px", padding:'0px',  backgroundColor: "transparent",
                   },
                 }}
               >
@@ -347,7 +348,7 @@ const CustomBusinessCards = ({ product }) => {
                   color: "white", // Change text color on hover
                 },
                 "@media (max-width: 767px)": {
-                  fontSize: "20px",
+                  fontSize: "20px", padding:'0px',  backgroundColor: "transparent",
                 },
               }}
             >
@@ -377,7 +378,7 @@ const CustomBusinessCards = ({ product }) => {
                   color: "white", // Change text color on hover
                 },
                 "@media (max-width: 767px)": {
-                  fontSize: "20px",
+                  fontSize: "20px", padding:'0px',  backgroundColor: "transparent",
                 },
               }}
             >
@@ -393,7 +394,7 @@ const CustomBusinessCards = ({ product }) => {
                 borderRadius: "10px",
                 fontSize: "20px",
                 "@media (max-width: 767px)": {
-                  fontSize: "20px",
+                  fontSize: "20px", padding:'0px',  backgroundColor: "transparent",
                 },
               }}
             >

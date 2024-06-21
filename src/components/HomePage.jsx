@@ -110,7 +110,7 @@ export default function HomePage() {
         };
       }, [x, y]);
   return (
-    <main style={{paddingTop:'90px'}}>
+    <main style={{paddingTop:'50px'}}>
     <section id="slider">
             <div className="container">
                 <div className="banner-wrap">
@@ -191,14 +191,16 @@ export default function HomePage() {
                     {/* Card 1 */}
                     <li className="card" id="card_1">
                         <div className="card__content">
-                            <div className="card-inner">
+                            <div className="card-inner homePageCardInner">
                                 <div className="col">
                                     {/* Next.js Image for optimized image loading */}
                                     <Image
                                         src={followUpCard}
                                         alt=""
-                                        width={500}
-                                        height={300}
+                                        // width={500}
+                                        // height={300}
+                                        loading='eager'
+                                        priority
                                     />
                                 </div>
                                 <div className="col">
@@ -209,7 +211,7 @@ export default function HomePage() {
                                             contextualize your contacts with tags and shared notes. Connect your
                                             account with your CRM and email provider.
                                         </p>
-                                        <a href="#" className="black-btn" aria-label="Read more about Make Follow Up Easy">
+                                        <a href="#" className="black-btn homePageButton" aria-label="Read more about Make Follow Up Easy">
                                             Learn More
                                         </a>
                                     </div>
@@ -221,21 +223,21 @@ export default function HomePage() {
                     {/* Card 2 */}
                     <li className="card" id="card_2">
                         <div className="card__content">
-                            <div className="card-inner card-type-2">
+                            <div className="card-inner homePageCardInner card-type-2">
                                 <div className="col">
                                     {/* Next.js Image for optimized image loading */}
                                     <Image
                                         src={createProfileCard}
                                         alt=""
-                                        width={600}
-                                        height={300}
+                                        // width={600}
+                                        // height={300}
                                     />
                                 </div>
                                 <div className="col">
                                     <div className="text-wrp">
                                         <h2>Create Your Profile in 60 Seconds</h2>
                                         <p>Populate your profile automatically with information from profiles on other platforms</p>
-                                        <a href="#" className="black-btn" aria-label="Read more about Create Your Profile">
+                                        <a href="#" className="black-btn homePageButton" aria-label="Read more about Create Your Profile">
                                             Learn More
                                         </a>
                                     </div>
@@ -247,7 +249,7 @@ export default function HomePage() {
                     {/* Card 3 */}
                     <li className="card" id="card_3">
                         <div className="card__content">
-                            <div className="card-inner card-type-3">
+                            <div className="card-inner homePageCardInner card-type-3">
                                 <div className="col">
                                     {/* Next.js Image for optimized image loading */}
                                     <Image
@@ -261,7 +263,7 @@ export default function HomePage() {
                                     <div className="text-wrp">
                                         <h2>Custom <br />Branding</h2>
                                         <p>Customize your profile and digital business card by syncing your profile and digital business card with your brand colors</p>
-                                        <a href="#" className="black-btn" aria-label="Read more about Custom Branding">
+                                        <a href="#" className="black-btn homePageButton" aria-label="Read more about Custom Branding">
                                             Learn More
                                         </a>
                                     </div>
@@ -273,7 +275,7 @@ export default function HomePage() {
                     {/* Card 4 */}
                     <li className="card" id="card_4">
                         <div className="card__content">
-                            <div className="card-inner card-type-4">
+                            <div className="card-inner homePageCardInner card-type-4">
                                 <div className="col">
                                     {/* Next.js Image for optimized image loading */}
                                     <Image
@@ -287,7 +289,7 @@ export default function HomePage() {
                                     <div className="text-wrp">
                                         <h2>Connect <br />Your Team </h2>
                                         <p>Track your team’s networking efforts on the ground, and automatically upload new contacts directly to your CRM.</p>
-                                        <a href="#" className="black-btn" aria-label="Read more about Your Team">
+                                        <a href="#" className="black-btn homePageButton" aria-label="Read more about Your Team">
                                             Learn More
                                         </a>
                                     </div>
