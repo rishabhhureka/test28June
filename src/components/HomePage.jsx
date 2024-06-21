@@ -152,8 +152,8 @@ export default function HomePage() {
                             <div className="slide" id="slide1">
                                 {/* Replace the src attributes with appropriate Next.js Image components */}
                                 {/* Use Next.js Image for optimized image loading */}
-                                <Image src={card1} className="card-a card1" alt="" /> 
-                                <Image src={card2} className="card-a card2" alt=""  />
+                                <Image src={card1} className="card-a card1" alt="Card1" priority loading='eager' /> 
+                                <Image src={card2} className="card-a card2" alt="Card2" priority loading='eager'  />
                                 {/* Placeholder for icons (using SVGs or font icons) */}
                                 <div className="icons">
                                     {/* SVG icon components (to be optimized) */}
@@ -332,22 +332,22 @@ export default function HomePage() {
                     {/* Product 1 */}
                     <div className="col-fix-2">
                         <h2 >Black Metal Cards</h2>
-                        <Image src={blackMetalCards} alt="Black Metal Cards" height={600} width={600}/>
+                        <Image src={blackMetalCards} alt="Black Metal Cards" />
                     </div>
                     {/* Product 2 */}
                     <div className="col-fix-2 type2">
                         <h2>Custom Digital Business Cards</h2>
-                        <Image src={customDigitalCard} alt="Custom Digital Business Cards" height={600} width={600}/>
+                        <Image src={customDigitalCard} alt="Custom Digital Business Cards" />
                     </div>
                     {/* Product 3 */}
                     <div className="col-fix-2 type3">
                         <h2>Google Review Cards</h2>
-                        <Image src={googleReviewCards} alt="Google Review Cards" height={600} width={600}/>
+                        <Image src={googleReviewCards} alt="Google Review Cards" />
                     </div>
                     {/* Product 4 */}
                     <div className="col-fix-2 type4">
                         <h2>NFC Table Stands</h2>
-                        <Image src={nfcTableStand} alt="NFC Table Stands" height={600} width={600}/>
+                        <Image src={nfcTableStand} alt="NFC Table Stands" />
                     </div>
                 </div>
             </div>
