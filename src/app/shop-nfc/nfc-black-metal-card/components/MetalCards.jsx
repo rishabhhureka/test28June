@@ -356,7 +356,7 @@ const MetalCards = ({ product }) => {
             <Link
               underline="hover"
               color="inherit"
-              href="/shop-nfc/metal-cards"
+              href="/shop-nfc/nfc-black-metal-card"
               className="linkBlog"
           
             >

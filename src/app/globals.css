@@ -1674,7 +1674,9 @@ display: block;
         display: flex;
         flex-direction: column
     }
-
+    .homePageCardInner{
+        flex-direction: row !important;
+    }
     .card-inner .col,
     .card-inner .col:last-child {
         flex: 1;
@@ -1689,7 +1691,9 @@ display: block;
     .card-inner img {
         width: 75%
     }
-
+.homePageCardInner img{
+    width: 100% !important;
+}
     :root {
         --card-height: 500px;
         --card-margin: 20px;
@@ -2195,7 +2199,9 @@ display: block;
         border-radius: 25px;
         height: 74vh
     }
-
+.homePageCardInner{
+    height: 50vh !important;
+}
     :root {
         --card-height: 320px;
         --card-margin: 24px;
@@ -2214,7 +2220,7 @@ display: block;
         top: 15px;
         width: 50px
     }
-
+  
     .col-fix {
         border-radius: 0 25.375px 25.375px;
         flex: 0 0 calc(50% - 15px);

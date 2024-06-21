@@ -4,7 +4,9 @@
     overflow: hidden;
     margin-bottom: 4rem;
   }
-  
+  .teamsContainerMain{
+    padding-top:50px ;
+  }
   .star-background {
     position: absolute;
     top: 0;
@@ -12,7 +14,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    margin-bottom: -6rem;
+    min-height: 100%;
   }
   
   /* .content-overlay {
@@ -29,7 +31,7 @@
 margin-bottom: 2rem;
   }
   .text-animated-block h2 {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
       }
   .text-animated-block h5{
     margin-bottom: 3rem;
@@ -62,7 +64,9 @@ margin-bottom: 2rem;
     color: #333;
 
   }
-  
+  .teamsCardContent{
+    width: 80%;
+  }
   .trial-btn {
     background-color: #007bff;
     color: #fff;
@@ -126,8 +130,15 @@ margin-bottom: 2rem;
   text-align: center;
   color: #000;
 }
-
+.dataSecurity{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .dataSecurity img{
+  display: flex;
+  justify-content: center;
   margin-bottom: 2rem;
   }
   .dataSecurity h2{
@@ -153,9 +164,11 @@ margin-bottom: 2rem;
     grid-template-columns: repeat(1, minmax(250px, 1fr));
 }
 .business-pro-section {
-  margin-bottom: 14rem;
+  margin-bottom: 4rem;
 }
-
+.teamsContainerMain{
+  padding-top:200px ;
+}
 .text-animated-block{
 padding: 50px 0;
 margin-bottom: 12rem;
@@ -187,7 +200,34 @@ margin-bottom: 12rem;
 margin: 2rem;
 }
 .teamscontainer{
-  max-width: 95%;
+  max-width: 100%;
+  padding: 1rem;
+}
+.teamsCardContent{
+  min-width: 100%;
+  min-height: 100%;
+  padding: 1rem;
+}
+.teamsCardInner{
+  padding: 1px !important;
+}
+.teamsCardInner{
+  padding: 1rem !important;
+  min-height: 90vh;
+}
+.section1{
+  min-height: 70vh;
+  /* overflow: scroll; */
+}
+.section2{
+  min-height: 85vh;
+  /* overflow: scroll; */
+}
+.teamsCardInner img{
+  width: 88%;
+}
+.teamsCardContent .col{
+  width: 80% ;
 }
 .teamscard{
   padding: 2rem;
@@ -203,13 +243,17 @@ margin: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
 .section1{
   padding: 2rem !important;
 }
 .section1 img{
- width: 250px;
- height: 250px;
-
+ width: 90%;
+ margin-bottom: 3rem;
+}
+.section2 img{
+  width: 100%;
+  margin-bottom: 2rem;
 }
 .card-inner .text-wrp h2{
   display: flex;

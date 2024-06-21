@@ -105,7 +105,7 @@ export default function Teams() {
   ];
 
   return (
-    <main data-v-0a07a5aa>
+    <main data-v-0a07a5aa className="teamsContainerMain">
       <div className="business-pro-section">
         <div className="star-background">
           <Image
@@ -151,8 +151,8 @@ export default function Teams() {
         }}
         data-v-0a07a5aa
       >
-        <div className="card__content" style={{ width: "80%" }}>
-          <div className="card-inner" style={{ backgroundColor: "white",padding:'4rem' }}>
+        <div className="card__content teamsCardContent" >
+          <div className="card-inner teamsCardInner" style={{ backgroundColor: "white",padding:'4rem' }}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
               <Image src={followUpCard} alt="" width={500} height={300}   loading="lazy" />
@@ -244,7 +244,7 @@ export default function Teams() {
         }}
         data-v-0a07a5aa
       >
-        <div className="card__content" style={{ width: "80%" }}>
+        <div className="card__content teamsCardContent" >
    
             <video  controls preload="none" className="video1" poster="/images/nfc-card.jpeg">
         <source src="/videos/video1.mp4" type="video/mp4" />
@@ -262,7 +262,7 @@ export default function Teams() {
         }}
         data-v-0a07a5aa
       >
-        <div className="card__content" style={{ width: "80%" }}>
+        <div className="card__content teamsCardContent" >
           <div className="card-inner section1" style={{ backgroundColor: "#fce93b" , padding:'4rem'}}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
@@ -271,11 +271,7 @@ export default function Teams() {
             <div className="col">
               <div className="text-wrp">
                 <h2 style={{ color: "black" }}>
-
-                  A One-Stop Solution
-                
-
-
+  A One-Stop Solution
                 </h2>
                 <p style={{ color: "black" }}>
                 mtApp’s intuitive admin dashboard allows you to create departments within your team and track in-limits that show up in different team profiles. Streamlined onboarding makes it easy for team members to use mtApp effectively from the start.
@@ -296,8 +292,8 @@ export default function Teams() {
         }}
         data-v-0a07a5aa
       >
-        <div className="card__content" style={{ width: "80%" }}>
-          <div className="card-inner section1" style={{ backgroundColor: "white",padding:'4rem' }}>
+        <div className="card__content teamsCardContent">
+          <div className="card-inner  section2" style={{ backgroundColor: "white",padding:'4rem' }}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
               <Image src={profileManagement} alt="" width={500} height={300} loading="lazy" />
@@ -330,8 +326,8 @@ export default function Teams() {
         }}
         data-v-0a07a5aa
       >
-        <div className="card__content" style={{ width: "80%" }}>
-          <div className="card-inner section1" style={{ backgroundColor: "#fce93b",padding:'4rem' }}>
+        <div className="card__content teamsCardContent" >
+          <div className="card-inner  section1" style={{ backgroundColor: "#fce93b",padding:'4rem' }}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
               <Image src={supportImage} alt="" width={500} height={300} loading="lazy" />
@@ -362,8 +358,8 @@ export default function Teams() {
         }}
         data-v-0a07a5aa
       >
-        <div className="card__content" style={{ width: "80%" }}>
-          <div className="card-inner section1" style={{ backgroundColor: "white" ,padding:'4rem'}}>
+        <div className="card__content teamsCardContent" >
+          <div className="card-inner  section2" style={{ backgroundColor: "white" ,padding:'4rem'}}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
               <Image src={followUpCard2} alt="" width={500} height={300} loading="lazy" />
@@ -394,8 +390,8 @@ export default function Teams() {
         }}
         data-v-0a07a5aa
       >
-        <div className="card__content" style={{ width: "80%" }}>
-          <div className="card-inner section1" style={{ backgroundColor: "#fce93b",padding:'4rem' }}>
+        <div className="card__content teamsCardContent" >
+          <div className="card-inner  section2" style={{ backgroundColor: "#fce93b",padding:'4rem' }}>
             <div className="col crmImage" >
               {/* Next.js Image for optimized image loading */}
               <Image src={crmIntegration} alt="" width={500} height={300} loading="lazy" />
@@ -424,13 +420,15 @@ export default function Teams() {
         }}
         data-v-0a07a5aa
       >
-        <div className="card__content" style={{ width: "80%" }}>
+        <div className="card__content teamsCardContent" >
           <div className="card-inner " style={{ backgroundColor: "white" ,padding:'4rem',height:'60vh'}}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
+          
               <Image src={ssoImage} alt="" width={500} height={300} loading="lazy" />
+         
             </div>
-            <div className="col">
+            <div className="col ">
               <div className="text-wrp">
                 <h2 style={{ color: "black" }}>
                 Secure Single Sign-On
@@ -448,14 +446,14 @@ export default function Teams() {
       </section>
       {/* 7 */}
       
-      <section className="our-commitment row-block"  style={{
+      <section className="our-commitment row-block"   style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
         }} >
-            <div className="cardDiv">
+            <div className="cardDiv ">
                 <div className=" wrap-col "  >
-                    <div className="col-fix-full dataSecurity" style={{minHeight:'477px', marginBottom:'2rem'}}>
+                    <div className="col-fix-full dataSecurity" style={{ marginBottom:'2rem'}}>
            
                             <Image
                                 src={lockIcon}
