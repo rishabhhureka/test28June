@@ -164,10 +164,10 @@ margin-bottom: 2rem;
     grid-template-columns: repeat(1, minmax(250px, 1fr));
 }
 .business-pro-section {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 .teamsContainerMain{
-  padding-top:200px ;
+  padding-top:100px ;
 }
 .text-animated-block{
 padding: 50px 0;
@@ -188,7 +188,7 @@ margin-bottom: 12rem;
   font-size: 28px;
 }
 .explore-btn, .trial-btn {
-  padding: 1rem 1.6rem;
+  padding: 1rem;
   font-size: 20px;
   width: 50%;
   font-weight: bolder;
@@ -213,14 +213,14 @@ margin: 2rem;
 }
 .teamsCardInner{
   padding: 1rem !important;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 .section1{
   min-height: 70vh;
   /* overflow: scroll; */
 }
 .section2{
-  min-height: 85vh;
+  min-height: 100vh;
   /* overflow: scroll; */
 }
 .teamsCardInner img{
@@ -249,7 +249,7 @@ margin: 2rem;
 }
 .section1 img{
  width: 90%;
- margin-bottom: 3rem;
+ /* margin-bottom: 1rem; */
 }
 .section2 img{
   width: 100%;

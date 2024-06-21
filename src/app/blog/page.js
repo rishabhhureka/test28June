@@ -221,7 +221,7 @@ const Blog = () => {
               </Card>
             </Box>
             {/* Mobile responsive card */}
-            <Box sx={{ display: { xs: "flex", md: "none" },justifyContent:'center' }}>
+            <Box sx={{ display: { xs: "flex", md: "none" },justifyContent:'center' ,padding:'1rem'}}>
               <Card
                 variant="plain"
                 sx={{
@@ -232,8 +232,13 @@ const Blog = () => {
                   borderRadius: 20,
                   "@media (max-width: 767px)": {
                     // Styles for screens up to 768px wide
-                    width: "80%",
-                    height: "65vh",
+                    width: "100%",
+                    height: "75vh",
+                   
+                  },
+                  "@media (max-width: 390px)": {
+                  
+                    height: "85vh",
                    
                   },
                 }}
@@ -349,8 +354,8 @@ const Blog = () => {
               margin: "0 auto"
               ,"@media (max-width: 767px)": {
                 gridTemplateColumns: "1fr", 
-                width: "80%",
-              
+                width: "100%",
+              padding:'1rem'
                     },
             }}
           >
