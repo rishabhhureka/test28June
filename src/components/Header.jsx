@@ -45,7 +45,7 @@ const Header = () => {
           <Link href="/" aria-label="Go to Home">
             <Image
               src={mtapLogo}
-              alt="Logo" height={100} width={100} loading="eager"
+              alt="Logo" height={100} width={100} priority loading="eager"
             />
           </Link>
         </div>
@@ -54,6 +54,7 @@ const Header = () => {
            src={menuIcon}
             alt="Menu" 
             onClick={toggleMenu}
+            priority
           />
         </button>
         <ul id="nav" className={`nav-links ${isMenuOpen ? "active" : ""}`}>
@@ -62,6 +63,7 @@ const Header = () => {
               src={closeIcon}
               alt="Close" 
               onClick={toggleMenu}
+              priority
             />
           </button>
           <li  className="dropdown">
