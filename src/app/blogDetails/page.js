@@ -752,6 +752,10 @@ const BlogDetails = () => {
                 height:'78vh'
             
                       },
+                      "@media (max-width: 390px)": {
+                height:'98vh'
+            
+                      },
               }}
             >
               <CardMedia
