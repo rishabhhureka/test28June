@@ -224,7 +224,7 @@ margin: 2rem;
   /* overflow: scroll; */
 }
 .teamsCardInner img{
-  width: 88%;
+  width: 90%;
 }
 .teamsCardContent .col{
   width: 80% ;
@@ -243,9 +243,7 @@ margin: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.section3{
-  height: 50vh;
-}
+
 .section1{
   padding: 2rem !important;
 }
