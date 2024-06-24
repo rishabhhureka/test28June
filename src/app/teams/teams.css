@@ -158,6 +158,72 @@ margin-bottom: 2rem;
   width: 100%;
   max-height: 80vh;
 }
+@media screen and (min-width:1024px) and (max-width:1140px) {
+  .business-pro-section{
+    margin-bottom: 14rem;
+  }
+  .text-animated-block{
+    padding: 380px 0;
+  }
+  .text-animated-block h1{
+    font-size: 400px;
+    margin-bottom: 4rem;
+  }
+  .text-animated-block h2{
+    font-size: 140px;
+    margin-bottom: 4rem;
+  }
+  .text-animated-block p{
+    font-size: 45px;
+  }.teamsCardContent{
+    width: 100%;
+    padding: 2rem;
+  }
+  .teamscontainer{
+    max-width: 100%;
+  }
+  .card-inner{
+  flex-direction: row;
+  }
+  .card-inner img{
+    width: 100%;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .business-pro-section{
+    margin-bottom: 4rem;
+  }
+  .text-animated-block{
+    padding: 280px 0;
+  }
+  .text-animated-block h1{
+    font-size: 250px;
+   
+  }
+  .text-animated-block h2{
+    font-size: 130px;
+    margin-bottom: 4rem;
+  }
+  .text-animated-block h5{
+    font-size: 60px;
+  }
+  .teamsContainerMain {
+    padding-top: 200px;
+}
+.teamsCardContent{
+  width: 100%;
+  padding: 2rem;
+}
+.teamscontainer{
+  max-width: 100%;
+}
+.card-inner{
+flex-direction: row;
+}
+.card-inner img{
+  width: 100%;
+}
+}
 
 @media screen and (max-width:767px) {
   .teamscard-grid {
@@ -170,8 +236,8 @@ margin-bottom: 2rem;
   padding-top:150px ;
 }
 .text-animated-block{
-padding: 50px 0;
-margin-bottom: 12rem;
+padding: 100px 0;
+margin-bottom: 4rem;
 }
 .text-animated-block h1{
   font-size: 180px;
@@ -277,5 +343,47 @@ padding: 2rem;
 }
 .flex-justify-end, .flex-justify-end a{
   margin-bottom: 20px;
+}
+}
+
+
+@media screen and (max-width:395px) {
+  .container{
+    padding: 1rem;
+  }
+  .business-pro-section{
+    min-height: 110vh;
+  }
+  .text-animated-block {
+   padding: 30px;
+    margin-bottom: 4rem;
+}
+.text-animated-block h1{
+  font-size: 160px;
+}
+.text-animated-block h2{
+  font-size: 80px;
+}
+.text-animated-block h5{
+  font-size: 32px;
+  margin-bottom: 2rem;
+}
+.text-animated-block p{
+  font-size: 25px;
+  margin-bottom: 4rem;
+}
+.section1{
+  min-height: 95vh;
+  /* overflow: scroll; */
+}
+.section2{
+  min-height: 120vh;
+}
+.teamsCardInner{
+  min-height: 125vh;
+}
+.explore-btn, .trial-btn{
+  padding: 10px;
+  font-size: 18px;
 }
 }

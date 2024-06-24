@@ -99,8 +99,8 @@ export default function Pro() {
         </section>
       </div>
       <section className="business-card" data-v-0a07a5aa>
-        <div className="container container-xs" data-v-0a07a5aa>
-          <div className="card-inner card-type-2 pro-page" data-v-0a07a5aa>
+        <div className="container container-xs" data-v-0a07a5aa >
+          <div className="card-inner card-type-2 pro-page" data-v-0a07a5aa >
             <div className="col" data-v-0a07a5aa>
               <Image src={networkingBusinessCards} alt="networkingBusinessCards" data-v-0a07a5aa />
             </div>

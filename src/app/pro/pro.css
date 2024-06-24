@@ -5,6 +5,9 @@
 .text-animated-block h1 {
     margin-bottom: 4rem !important;
 }
+.text-animated-block h5{
+    margin-bottom: 2rem;
+}
 .business-pro-section{
     margin-bottom: 10rem !important;
 }
@@ -22,4 +25,5 @@
 .overlap-group img{
     width: 60%;
 }
+
 }
