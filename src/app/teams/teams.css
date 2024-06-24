@@ -352,10 +352,11 @@ padding: 2rem;
     padding: 1rem;
   }
   .business-pro-section{
-    min-height: 110vh;
+    min-height: 115vh;
+    margin-bottom: 0rem;
   }
   .text-animated-block {
-   padding: 30px;
+   padding: 6px;
     margin-bottom: 4rem;
 }
 .text-animated-block h1{
