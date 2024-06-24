@@ -294,7 +294,7 @@ const CustomBusinessCards = ({ product }) => {
               backgroundColor: "transparent",
               "@media (max-width: 767px)": {
                 marginLeft: "0rem",
-        
+                lineHeight:'3.8rem',
               },
             }}
           >

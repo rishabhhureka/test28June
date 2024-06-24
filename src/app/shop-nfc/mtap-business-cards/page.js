@@ -50,7 +50,10 @@ const mtapBusinessCards = () => {
        
               border: "1px solid transparent",
               backgroundColor: "transparent",
-            
+              "@media (max-width: 767px)": {
+                marginLeft: "0rem",
+                lineHeight:'3.8rem',
+              },
             }}
           >
             <Link

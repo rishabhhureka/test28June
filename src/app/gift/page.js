@@ -43,7 +43,7 @@ export default function Gifts() {
   return (
     <>
 
-      <div className="page-wrapper" style={{marginTop:'10rem'}}>
+      <div className="page-wrapper giftContainerMain">
 
 
         <div className="container1" >
@@ -71,8 +71,10 @@ A GIFT THEY’LL <br/>USE EVERY DAY. </h2>
           </section> */}
         
           <section className="section section3">
-            <h2 className="text-center">mTap’s <strong>Digital Business Card </strong> <br/>
-will be the only gift they remember receiving one year from now - because they’ll still be using it!</h2>
+            <h2 className="text-center">mTap’s <strong>Digital Business Card </strong> <br/> </h2>
+            <h2 className='gifth2'>
+will be the only gift they remember receiving one year from now - because they’ll still be using it!
+</h2>
             <div className="cardsBlks">
               <div className="row row2">
                 <h3 className="title"> WORKS ON <br /> ALL PHONES</h3>
@@ -113,7 +115,7 @@ Your Colors</div>
        
         </div>
         <section className="our-accordion row-block">
-        <h2 className="text-center" style={{fontSize:'80px'}}>FREQUENTLY ASKED QUESTIONS</h2>
+        <h2 className="text-center faqCss" style={{fontSize:'80px'}}>FREQUENTLY ASKED QUESTIONS</h2>
       <div className="container container-xs" >
         <div className="accordion-wrap" >
           {accordionData.map((item, index) => (
