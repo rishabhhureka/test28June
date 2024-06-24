@@ -2572,11 +2572,27 @@ footer .copy {
     text-align: center;
     width: 100%
 }
+@media screen and (max-width:1030px) {
+    footer .column {
+        flex-basis: 35%;
+        margin: 0 0 30px
+    }
+    footer .columnSocial{
+        flex-basis: 49%;
+        justify-content: center;
+        margin: 0 0 30px;
+    }
+}
 
 @media screen and (max-width:768px) {
     footer .column {
-        flex-basis: 100%;
+        flex-basis: 35%;
         margin: 0 0 30px
+    }
+    footer .columnSocial{
+        flex-basis: 100%;
+        justify-content: center;
+        margin: 0 0 30px;
     }
 .cardBlog{
     grid-template-columns: "1fr", 
@@ -2595,7 +2611,8 @@ font-size: 65px !important;
 
     footer {
         border-radius: 88px 88px 0 0;
-        margin: 20px
+        margin: 10px;
+     
     }
 
     footer h3 {

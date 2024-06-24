@@ -1,157 +1,280 @@
-'use client'
-import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+
+import { useState } from 'react'
+import {
+  Dialog,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from '@headlessui/react'
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline'
 import mtapLogo from "../Img/mtapLogo.png";
-import menuIcon from "../Img/menu.png";
-import closeIcon from "../Img/close.png";
-import { Menu, MenuItem, Button } from '@mui/material';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image';
+import Link from 'next/link';
 
-// import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
-// import { renewToken } from '../utils/auth';
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+const products = [
+  { name: 'mTap Custom Cards', description: '', href: '/shop-nfc/custom-digital-business-cards', icon: ChartPieIcon },
+  { name: 'Google Review Cards', description: '', href: '/shop-nfc/mtap-review-cards', icon: CursorArrowRaysIcon },
+  { name: 'NFC Black Metal Card', description: '', href: '/shop-nfc/nfc-black-metal-card', icon: FingerPrintIcon },
+  { name: 'mTap Key Fobs', description: '', href: '/shop-nfc/mtap-key-fobs', icon: SquaresPlusIcon },
+  { name: 'mTap Retail Solutions', description: '', href: "/shop-nfc/mtap-retail-solutions", icon: ArrowPathIcon },
+  { name: 'mTap Business Cards', description: '', href: "/shop-nfc/mtap-business-cards", icon: ArrowPathIcon },
+  { name: 'mTap Collections', description: '', href: "/shop-nfc/mtap-collections", icon: ArrowPathIcon },
+  { name: 'mTap Stickers', description: '', href: "/shop-nfc/mtap-stickers", icon: ArrowPathIcon },
+]
+const solutions = [
+  { name: 'Google Review Cards', description: '', href: '/googlereviewcards', icon: CursorArrowRaysIcon },
+  { name: 'Gift', description: '', href: '/gift', icon: FingerPrintIcon },
+]
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-// const Header = async() => {
-  // const session = await getSession();
-  // const user = session?.user;
-  // console.log(user);
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 
-  // useEffect(() => {
-  //   const renew = async () => {
-  //     await renewToken();
-  //   };
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  //   if (user) {
-  //     const intervalId = setInterval(renew, 4320 * 60 * 1000); // Renew token every 4320 minutes (3 days)
-  //     return () => clearInterval(intervalId);
-  //   }
-  // }, [user]);
   return (
-    <header>
-      <nav>
-        <div className="logo">
-          <Link href="/" aria-label="Go to Home">
-            <Image
-              src={mtapLogo}
-              alt="Logo" height={100} width={100}  loading="eager"
-            />
+    <header className="bg-transparent">
+      <nav className="mx-auto flex max-w-full items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div className="flex lg:flex-1 text-white">
+        <Link href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only text-white">MtapLogo</span>
+            <Image className="h-12 w-auto" src={mtapLogo} alt="" />
           </Link>
         </div>
-        <button className="menu-button" aria-label="Menu Button">
-          <Image
-           src={menuIcon}
-            alt="Menu" 
-            onClick={toggleMenu}
-            loading="eager"
-          />
-        </button>
-        <ul id="nav" className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-          <button className="close-button" aria-label="Close Button">
-            <Image
-              src={closeIcon}
-              alt="Close" 
-              onClick={toggleMenu}
-              loading="eager"
-            />
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className="sr-only text-white" >Open main menu</span>
+            <Bars3Icon className="h-10 w-10" aria-hidden="true" />
           </button>
-          <li  className="dropdown">
-            <Link href="/shop-nfc" aria-current="page" className="nav-link">Shop NFC</Link>
-            <div className="dropdown-content">
-       <div className="emptyDropdown"></div>
-     
-      
-      <div className="maindropdown-content">
-      <p className="menu-item">
-     <Link href="/shop-nfc/custom-digital-business-cards">mTap Custom Cards</Link>
-     </p>
-        <p className="menu-item">
-        <Link href="/shop-nfc/mtap-review-cards">Google Review Cards</Link>
-       
-        </p>
-     <p className="menu-item">
-     <Link href="/shop-nfc/nfc-black-metal-card">NFC Black Metal Card</Link>
-     </p>
-     <p className="menu-item">
-     <Link href="/shop-nfc/mtap-key-fobs">mTap Key Fobs</Link>
-     </p>
-     <p className="menu-item">
-     <Link href="/shop-nfc/mtap-retail-solutions">mTap Retail Solutions</Link>
-     </p>
-     <p className="menu-item">
-     <Link href="/shop-nfc/mtap-business-cards">mTap Business Cards</Link>
-     </p>
-     <p className="menu-item">
-     <Link href="/shop-nfc/mtap-collections">mTap Collections</Link>
-     </p>
-     <p className="menu-item">
-     <Link href="/shop-nfc/mtap-stickers">mTap Stickers</Link>
-     </p>
-               
-     </div>
-      </div>
-          </li>
-       
-          <li>
-            <Link href="/subscriptions" className="nav-link">Subscriptions</Link>
-          </li>
-          <li>
-            <Link href="/pro" className="nav-link">Pro</Link>
-          </li>
-          <li>
-            <Link href="/teams" className="nav-link">For Teams</Link>
-          </li>
-          <li className="dropdown" >
-      <a   className="nav-link" >Solutions</a>
-      <div className="dropdown-content">
-       <div className="emptyDropdown"></div>
-        <br />
-      
-      <div className="maindropdown-content">
-        <p className="menu-item">
-        <Link href="/googlereviewcards" style={{  marginTop: "2rem"}}>Google Review Cards</Link>
-       
-        </p>
-     <p className="menu-item">
-     <Link href="/gift">Gift</Link>
-     </p>
-               <br />
-     </div>
-      </div>
-    </li>
-          <li>
-            <Link href="/blog" className="nav-link">Blog</Link>
-          </li>
-          {/* <li>
-            <Link href="/cart" className="nav-link"> <ShoppingCartOutlinedIcon sx={{fontSize:30}} /></Link>
-          </li> */}
-         
-        </ul>
-        {/* <ul className="auth-links">
-        {user ? (
-            <li>
-              <Link href="/api/auth/logout" aria-current="page" className="auth-link">Sign Out {user.nickname}</Link>
-            </li>
-          ) : (
-            <li>
-              <Link href="/api/auth/login" aria-current="page" className="auth-link">Sign In</Link>
-            </li>
-          )}
-        </ul> */}
-      </nav>
-    </header>
-  );
-};
+        </div>
+        <PopoverGroup className="hidden lg:flex lg:gap-x-20">
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-x-1 text-2xl  leading-6 text-white hover:text-indigo-600">
+              <Link href='/shop-nfc' alt="" >  Shop NFC </Link>
+           
+              <ChevronDownIcon className="h-6 w-8 flex-none text-white" aria-hidden="true" />
+            </PopoverButton>
 
-export default Header;
+            <PopoverPanel
+              transition
+              className="absolute  -left-8 top-full z-10 mt-6 w-screen max-w-sm overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="p-4">
+                {products.map((item) => (
+                  <div
+                    key={item.name}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
+                    {/* <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-grey">
+                      <item.icon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                    </div> */}
+                    <div className="flex-auto">
+                      <Link href={item.href} className="block text-2xl  text-gray-900 hover:text-indigo-600">
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </Link>
+                      <p className="mt-1 text-gray-600">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+       
+            </PopoverPanel>
+          </Popover>
+
+          <Link href="/subscriptions" className="text-2xl  leading-6 text-whites hover:text-indigo-600">
+           Subscriptions
+          </Link>
+          <Link href="/pro" className="text-2xl  leading-6 text-white hover:text-indigo-600">
+         Pro
+          </Link>
+          <Link href="/teams" className="text-2xl  leading-6 text-white hover:text-indigo-600">
+        For Teams
+          </Link>
+          <Popover className="relative" >
+            <PopoverButton className="flex items-center gap-x-1 text-2xl  leading-6 text-white hover:text-indigo-600">
+              Solutions
+           
+              <ChevronDownIcon className="h-6 w-8 flex-none text-white" aria-hidden="true" />
+            </PopoverButton>
+
+            <PopoverPanel
+              transition
+              className="absolute  -left-16 top-full z-10 mt-6 w-screen max-w-xs overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="p-4">
+                {solutions.map((item) => (
+                  <div
+                    key={item.name}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                  >
+                    {/* <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-grey">
+                      <item.icon className="h-8 w-8 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                    </div> */}
+                    <div className="flex-auto">
+                      <Link href={item.href} className="block text-2xl  text-gray-900 hover:text-indigo-600">
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </Link>
+                      <p className="mt-1 text-gray-600">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+       
+            </PopoverPanel>
+          </Popover>
+          {/* <Link href="/subscriptions" className="text-2xl  leading-6 text-white">
+       Solutions
+          </Link> */}
+          <Link href="/blog" className="text-2xl  leading-6 text-white hover:text-indigo-600">
+        Blog
+          </Link>
+        </PopoverGroup>
+        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" className="text-sm  leading-6 text-white">
+            Log in <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div> */}
+      </nav>
+      <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <div className="fixed inset-0 z-10" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 mt-40">
+          <div className="flex items-center justify-end">
+            {/* <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only text-white">Your Company</span>
+              <Image
+                className="h-8 w-auto"
+                src={mtapLogo}
+                alt=""
+              />
+            </a> */}
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-white-700"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="sr-only text-white">Close menu</span>
+              <XMarkIcon className="h-8 w-8" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                <Disclosure as="div" className="-mx-3">
+                  {({ open }) => (
+                    <>
+                      <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-6 pl-3 pr-3.5  text-3xl  leading-7 text-white hover:bg-gray-50 hover:text-black">
+                       
+                       <Link href='/shop-nfc' alt='' >   Shop NFC</Link>
+                     
+                        <ChevronDownIcon
+                          className={classNames(open ? 'rotate-180' : '', 'h-8 w-8 flex-none')}
+                          aria-hidden="true"
+                        />
+                      </DisclosureButton>
+                      <DisclosurePanel className="mt-2 space-y-2">
+                        {[...products].map((item) => (
+                          <DisclosureButton
+                            key={item.name}
+                            as="a"
+                            href={item.href}
+                            className="block rounded-lg py-6 pl-6 pr-3 text-2xl  leading-7 text-white hover:bg-gray-50"
+                          >
+                            {item.name}
+                          </DisclosureButton>
+                        ))}
+                      </DisclosurePanel>
+                    </>
+                  )}
+                </Disclosure>
+                <Link
+                  href="/subscriptions"
+                  className="-mx-3 block rounded-lg px-3 py-6 text-3xl  leading-7 text-white hover:bg-gray-50 hover:text-black"
+                >
+                Subscriptions
+                </Link>
+                <Link
+                  href="/pro"
+                  className="-mx-3 block rounded-lg px-3 py-6 text-3xl  leading-7 text-white hover:bg-gray-50 hover:text-black"
+                >
+             Pro
+                </Link>
+                <Link
+                  href="/teams"
+                  className="-mx-3 block rounded-lg px-3 py-6 text-3xl  leading-7 text-white hover:bg-gray-50 hover:text-black"
+                >
+               For Teams
+                </Link>
+                <Disclosure as="div" className="-mx-3">
+                  {({ open }) => (
+                    <>
+                      <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-6 pl-3 pr-3.5  text-3xl  leading-7 text-white hover:bg-gray-50 hover:text-black">
+                       Solutions
+                        <ChevronDownIcon
+                          className={classNames(open ? 'rotate-180' : '', 'h-8 w-8 flex-none')}
+                          aria-hidden="true"
+                        />
+                      </DisclosureButton>
+                      <DisclosurePanel className="mt-2 space-y-2">
+                        {[...solutions].map((item) => (
+                          <DisclosureButton
+                            key={item.name}
+                            as="a"
+                            href={item.href}
+                            className="block rounded-lg py-6 pl-6 pr-3 text-2xl  leading-7 text-white hover:bg-gray-50"
+                          >
+                            {item.name}
+                          </DisclosureButton>
+                        ))}
+                      </DisclosurePanel>
+                    </>
+                  )}
+                </Disclosure>
+                {/* <Link
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-6 text-3xl  leading-7 text-white hover:bg-gray-50 hover:text-black"
+                >
+             Solutions
+                </Link> */}
+                <Link
+                  href="/blog"
+                  className="-mx-3 block rounded-lg px-3 py-6 text-3xl  leading-7 text-white hover:bg-gray-50 hover:text-black"
+                >
+            Blogs
+                </Link>
+              </div>
+                {/* <div className="py-6">
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-xl  leading-7 text-white hover:bg-gray-50"
+                  >
+                    Log in
+                  </a>
+                </div> */}
+            </div>
+          </div>
+        </DialogPanel>
+      </Dialog>
+    </header>
+  )
+}
