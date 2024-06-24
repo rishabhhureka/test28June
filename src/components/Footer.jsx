@@ -79,7 +79,8 @@ const Footer = () => (
   {/* </div> */}
   {/* Social Media Icons Section */}
   <div className="row">
-      <div className="column social">
+      {/* <div className="column social"> removed it for new changes */}
+      <div className=" columnSocial social">
           {/* Add your SVG images or placeholders with appropriate links */}
           {/* For example: */}
           <a href="#" target="_blank" aria-label="linkedinIcon">
@@ -126,7 +127,7 @@ const Footer = () => (
                             <a href="#" target="_blank" aria-label="Youtube">    <Image src={youtubeIcon} alt="youtubeIcon" height={55} width={55}/></a>
           {/* Repeat for other social icons */}
       </div>
-      <div className="column" style={{display:'flex', gap:8}}>
+      <div className="columnSocial" style={{display:'flex', gap:8}}>
           {/* Additional App Store/Google Play links */}
           <a href="#" target="_blank" aria-label="dummy Link">
               <Image src={googlePlayIcon} className="app" alt="Google Play Icon" loading="lazy" />
@@ -135,7 +136,7 @@ const Footer = () => (
               <Image src={appStore} className="app" alt="App Store Icon" loading="lazy"/>
           </a>
       </div>
-      <div className="column"><button>Login</button><button className="green">Get started for free</button></div>
+      <div className="columnSocial"><button>Login</button><button className="green">Get started for free</button></div>
   </div>
   <div className="row">
                     <div className="copy">
