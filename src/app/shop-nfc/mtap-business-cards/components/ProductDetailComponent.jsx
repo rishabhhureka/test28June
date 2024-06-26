@@ -581,7 +581,7 @@ padding: '0.5rem',
       marginTop: '2rem'
     }}>
       <h2 style={{ fontSize: '70px', fontWeight: 'bold' ,marginBottom:'2rem'}}>Description</h2>
-      <Typography sx={{ fontSize: '30px', width: '100vw', marginBottom: '5rem'}} className="DescriptionP">Are you a business professional, professional sales person or even building your downline for your network marketing business? It's time to stop handing out paper business cards that never get looked at and start transfeering the power of your brand to prospects, customers, colleagues and partners. mTap Cards are much, much more than a digital business card, as you can set customizable links for more than your contact information, but also your website, videos, social media and much, much more. Put the power of mTap to work for your business and never let someone throw away your contact information again.
+      <Typography sx={{ fontSize: '30px', width: '100vw', marginBottom: '5rem'}} className="DescriptionP">Are you a business professional, professional sales person or even building your downline for your network marketing business? It&apos;s time to stop handing out paper business cards that never get looked at and start transfeering the power of your brand to prospects, customers, colleagues and partners. mTap Cards are much, much more than a digital business card, as you can set customizable links for more than your contact information, but also your website, videos, social media and much, much more. Put the power of mTap to work for your business and never let someone throw away your contact information again.
 
 Powered by
 </Typography>

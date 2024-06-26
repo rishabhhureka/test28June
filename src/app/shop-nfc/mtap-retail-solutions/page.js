@@ -181,7 +181,7 @@ Never run out of space again to promote your products and store with mTap Table 
               {products.map((product) => (
                 <div key={product.id} className="group relative">
                   <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-white-200  lg:aspect-none group-hover:opacity-75 lg:h-100">
-                    <img
+                    <Image
                       src={product.imageSrc}
                       alt={product.imageAlt}
                       width={100}
