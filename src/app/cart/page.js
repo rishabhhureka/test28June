@@ -45,7 +45,7 @@ const Cart = () => {
     <TableContainer component={Paper} sx={{padding:'2rem',minHeight:'120vh',marginTop:'10rem',marginBottom:'2rem',"@media (max-width: 767px)": {
       padding:'1rem'
       }, }}>
-         <Link href="/product"  ><ArrowBackIosNewIcon sx={{fontSize:40,marginBottom:'1rem' ,color:'black'}} /></Link>
+         <Link href="/shop-nfc"  ><ArrowBackIosNewIcon sx={{fontSize:40,marginBottom:'1rem' ,color:'black'}} /></Link>
     <Box sx={{ flexGrow: 1, padding: 3,"@media (max-width: 767px)": {
                  padding: 0
                       }}}>
