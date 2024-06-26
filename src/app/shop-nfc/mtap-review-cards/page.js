@@ -151,10 +151,7 @@ const ReviewCards = () => {
               {products.map((product) => (
                 <div key={product.id} className="group relative">
                   <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-white-200  lg:aspect-none group-hover:opacity-75 lg:h-100">
-                    <img
-                      src={product.imageSrc}
-                      alt={product.imageAlt}
-                      width={100}
+                    <Image
                       height={100}
                       objectFit="cover"
                       loading="eager"

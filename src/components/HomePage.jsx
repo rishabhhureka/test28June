@@ -148,15 +148,14 @@ export default function HomePage() {
                   perspective: 1000,
                 }}
               >
-                            {/* Placeholder for images (using Next.js Image component) */}
+                            
                             <div className="slide" id="slide1">
-                                {/* Replace the src attributes with appropriate Next.js Image components */}
-                                {/* Use Next.js Image for optimized image loading */}
+                              
                                 <Image src={card1} className="card-a card1" alt="Card1" priority loading='eager' /> 
                                 <Image src={card2} className="card-a card2" alt="Card2" priority loading='eager'  />
-                                {/* Placeholder for icons (using SVGs or font icons) */}
+                                
                                 <div className="icons">
-                                    {/* SVG icon components (to be optimized) */}
+                                 
                                     <span className="icon s1"><svg xmlns="http://www.w3.org/2000/svg"
                                                     width="75" height="75" viewBox="0 0 75 75" fill="none" loading='eager'>
                                                     <path
@@ -193,7 +192,7 @@ export default function HomePage() {
                         <div className="card__content">
                             <div className="card-inner homePageCardInner">
                                 <div className="col">
-                                    {/* Next.js Image for optimized image loading */}
+                                
                                     <Image
                                         src={followUpCard}
                                         alt=""

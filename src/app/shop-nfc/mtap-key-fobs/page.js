@@ -155,7 +155,7 @@ const mtapKeyFobs = () => {
               >
                Your digital business card on the go. All your contact information on a mTap Digital Business Fob.
 <br/>
-What piece of equipment that we use daily could be more accessible to us as our keys. Using an mtap Digital Business Fob allows you to transfer a host of information to a clients smartphone. This information is entirely yours to edit. It could include contact details, a webpage link(s), videos, examples of completed projects. The key fob is with you all the time and makes sure that the prospective client won’t lose your contact details. That and a piece of technology this effective, yet unobtrusive, makes for a great way to break the ice! 
+What piece of equipment that we use daily could be more accessible to us as our keys. Using an mtap Digital Business Fob allows you to transfer a host of information to a clients smartphone. This information is entirely yours to edit. It could include contact details, a webpage link(s), videos, examples of completed projects. The key fob is with you all the time and makes sure that the prospective client won&apos;t lose your contact details. That and a piece of technology this effective, yet unobtrusive, makes for a great way to break the ice! 
 <br/>
 Ensure your contacts never lose you with mTap Digital Business Fobs.
               </p>
@@ -169,7 +169,7 @@ Ensure your contacts never lose you with mTap Digital Business Fobs.
               {products.map((product) => (
                 <div key={product.id} className="group relative">
                   <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-white-200  lg:aspect-none group-hover:opacity-75 lg:h-100">
-                    <img
+                    <Image
                       src={product.imageSrc}
                       alt={product.imageAlt}
                       width={100}

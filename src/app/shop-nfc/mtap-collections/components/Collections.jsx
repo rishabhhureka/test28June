@@ -518,7 +518,7 @@ padding: '0.5rem',
       marginTop: '2rem'
     }}>
       <h2 style={{ fontSize: '70px', fontWeight: 'bold' ,marginBottom:'2rem'}}>Description</h2>
-      <Typography sx={{ fontSize: '30px', width: '100vw', marginBottom: '5rem'}} className="DescriptionP">Are you just too cool for school or do you run exclusively with the "in' crowd? mTap Keys are the perfect way to slyly tap your associate's iPhone or touch their Android phone and transfer your digits with sauve and class. Put the power of mTap to work for you and your business without ever losing your cool.
+      <Typography sx={{ fontSize: '30px', width: '100vw', marginBottom: '5rem'}} className="DescriptionP">Are you just too cool for school or do you run exclusively with the in crowd? mTap Keys are the perfect way to slyly tap your associate's iPhone or touch their Android phone and transfer your digits with sauve and class. Put the power of mTap to work for you and your business without ever losing your cool.
 
 
 </Typography>

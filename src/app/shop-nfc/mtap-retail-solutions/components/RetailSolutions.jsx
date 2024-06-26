@@ -617,8 +617,8 @@ useEffect(() => {
             className="DescriptionP"
           >
             Are you just too cool for school or do you run exclusively with the
-            "in' crowd? mTap Keys are the perfect way to slyly tap your
-            associate's iPhone or touch their Android phone and transfer your
+            in crowd? mTap Keys are the perfect way to slyly tap your
+            associate&apos;s iPhone or touch their Android phone and transfer your
             digits with sauve and class. Put the power of mTap to work for you
             and your business without ever losing your cool.
           </Typography>
