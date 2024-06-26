@@ -2194,6 +2194,7 @@ display: block;
     .card-inner p {
         font-size: 22px;
         line-height: 120%;
+        font-weight: 700;
         margin-bottom: 13px
     }
 
@@ -2510,6 +2511,9 @@ display: block;
     }
     .left-col-banner a.basic-btn, a.black-btn{
         font-size: 18px;
+    }
+    .card-inner .text-wrp{
+        padding: 10px;
     }
   }
   @media only screen and (max-width: 340px)  {
