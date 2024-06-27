@@ -112,7 +112,7 @@ export default function Teams() {
             src={star}
             alt="Star Background"
             layout="fill"
-            objectFit="cover"
+          
             quality={100}
             loading="eager"
             priority
@@ -155,7 +155,7 @@ export default function Teams() {
           <div className="card-inner teamsCardInner" style={{ backgroundColor: "white",padding:'4rem' }}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
-              <Image src={followUpCard} alt="" width={500} height={300}   loading="lazy" />
+              <Image src={followUpCard} alt="followUpCard" width={500} height={300}   loading="lazy" />
             </div>
             <div className="col">
               <div className="text-wrp">
@@ -266,7 +266,7 @@ export default function Teams() {
           <div className="card-inner section1" style={{ backgroundColor: "#fce93b" , padding:'4rem'}}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
-              <Image src={oneStopSolution} alt="" width={500} height={300} loading="lazy" />
+              <Image src={oneStopSolution} alt="oneStopSolution" width={500} height={300} loading="lazy" />
             </div>
             <div className="col">
               <div className="text-wrp">
@@ -296,7 +296,7 @@ export default function Teams() {
           <div className="card-inner  section2" style={{ backgroundColor: "white",padding:'4rem' }}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
-              <Image src={profileManagement} alt="" width={500} height={300} loading="lazy" />
+              <Image src={profileManagement} alt="profileManagement" width={500} height={300} loading="lazy" />
             </div>
          
 
@@ -330,7 +330,7 @@ export default function Teams() {
           <div className="card-inner  section1" style={{ backgroundColor: "#fce93b",padding:'4rem' }}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
-              <Image src={supportImage} alt="" width={500} height={300} loading="lazy" />
+              <Image src={supportImage} alt="supportImage" width={500} height={300} loading="lazy" />
             </div>
            
 
@@ -362,7 +362,7 @@ export default function Teams() {
           <div className="card-inner  section2" style={{ backgroundColor: "white" ,padding:'4rem'}}>
             <div className="col">
               {/* Next.js Image for optimized image loading */}
-              <Image src={followUpCard2} alt="" width={500} height={300} loading="lazy" />
+              <Image src={followUpCard2} alt="followUpCard2" width={500} height={300} loading="lazy" />
             </div>
        
 
@@ -394,7 +394,7 @@ export default function Teams() {
           <div className="card-inner  section2" style={{ backgroundColor: "#fce93b",padding:'4rem' }}>
             <div className="col crmImage" >
               {/* Next.js Image for optimized image loading */}
-              <Image src={crmIntegration} alt="" width={500} height={300} loading="lazy" />
+              <Image src={crmIntegration} alt="crmIntegration" width={500} height={300} loading="lazy" />
             </div>
             <div className="col">
               <div className="text-wrp">
@@ -425,7 +425,7 @@ export default function Teams() {
             <div className="col">
               {/* Next.js Image for optimized image loading */}
           
-              <Image src={ssoImage} alt="" width={500} height={300} loading="lazy" />
+              <Image src={ssoImage} alt="ssoImage" width={500} height={300} loading="lazy" />
          
             </div>
             <div className="col ">

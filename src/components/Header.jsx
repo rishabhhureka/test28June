@@ -1,4 +1,5 @@
 
+'use client'
 import { useState } from 'react'
 import {
   Dialog,
@@ -53,7 +54,7 @@ export default function Header() {
         <div className="flex lg:flex-1 text-white">
         <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only text-white">MtapLogo</span>
-            <Image className="h-12 w-auto" src={mtapLogo} alt="" />
+            <Image className="h-12 w-auto" src={mtapLogo} alt="mtapLogo" height={200} width={200} />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -69,7 +70,7 @@ export default function Header() {
         <PopoverGroup className="hidden lg:flex lg:gap-x-20">
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-2xl  leading-6 text-white hover:text-indigo-600">
-              <Link href='/shop-nfc' alt="" >  Shop NFC </Link>
+              <Link href='/shop-nfc' alt="Shop NFC" >  Shop NFC </Link>
            
               <ChevronDownIcon className="h-6 w-8 flex-none text-white" aria-hidden="true" />
             </PopoverButton>

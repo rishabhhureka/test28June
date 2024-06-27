@@ -91,9 +91,12 @@ import Link from 'next/link';
   };
   
 const CustomBusinessCards = ({ product }) => {
-    const [quantity, setQuantity] = useState(1);
+  
     const [count, setCount] = useState(1);
-
+    const [expanded, setExpanded] = useState(0);
+    const handleChange = (panel) => (event, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
+    };
     const images = product.images.map((image, index) => ({ src: image.src, alt: product.name }));
       const [selectedImage, setSelectedImage] = useState(images[0]);
       console.log(selectedImage,'sjkasdkb');
@@ -177,10 +180,10 @@ const CustomBusinessCards = ({ product }) => {
   }, []);
 
     const colors = [
-      { name: 'danger', bgColor: 'red' },
-      { name: 'white', bgColor: 'white' },
-      { name: 'black', bgColor: '#000' },
-      { name: 'primary', bgColor: 'blue' },
+      { name: 'danger', bgColor: 'red',colour:'white' },
+      { name: 'white', bgColor: 'white',colour:'black' },
+      { name: 'black', bgColor: '#000',colour:'white' },
+      { name: 'primary', bgColor: 'blue' ,colour:'white'},
     ];
   
     const handleIncrement = () => {
@@ -193,9 +196,7 @@ const CustomBusinessCards = ({ product }) => {
       }
     };
   
-    const handleQuantityChange = (event) => {
-      setQuantity(event.target.value);
-    };
+
     const faqScript = `{
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -320,7 +321,7 @@ const CustomBusinessCards = ({ product }) => {
                     color: "white", // Change text color on hover
                   },
                   "@media (max-width: 767px)": {
-                    fontSize: "20px", padding:'0px',  backgroundColor: "transparent",
+                    fontSize: "20px",
                   },
                 }}
               >
@@ -348,7 +349,7 @@ const CustomBusinessCards = ({ product }) => {
                   color: "white", // Change text color on hover
                 },
                 "@media (max-width: 767px)": {
-                  fontSize: "20px", padding:'0px',  backgroundColor: "transparent",
+                  fontSize: "20px",
                 },
               }}
             >
@@ -378,7 +379,7 @@ const CustomBusinessCards = ({ product }) => {
                   color: "white", // Change text color on hover
                 },
                 "@media (max-width: 767px)": {
-                  fontSize: "20px", padding:'0px',  backgroundColor: "transparent",
+                  fontSize: "20px"
                 },
               }}
             >
@@ -403,7 +404,7 @@ const CustomBusinessCards = ({ product }) => {
           </Breadcrumbs>
         </div>
         
-    <h1 className="googleReviewCardsHeading" style={{ fontSize: '68px', fontWeight: "600", textAlign: 'center' ,marginBottom:'1rem'}}>{product.name}</h1>
+    <h1 className="googleReviewCardsHeading" style={{ fontSize: '68px', fontWeight: "600", textAlign: 'center',marginTop:'1rem' ,marginBottom:'1rem'}}>{product.name}</h1>
 
     <Card
       size="lg"
@@ -443,7 +444,7 @@ const CustomBusinessCards = ({ product }) => {
               }}
               onClick={() => setSelectedImage(image)}
             >
-              <Image src={image.src} alt={image.alt} width={120} height={80} loading="eager" priority />
+              <Image src={image.src} alt={image.alt} width={120} height={80} priority />
             </Box>
           ))}
         </Box>
@@ -461,13 +462,16 @@ const CustomBusinessCards = ({ product }) => {
             }
           }}
         >
-          <Image src={selectedImage.src} alt={selectedImage.alt} loading="eager" width={800} height={400} priority />
+          <Image src={selectedImage.src} alt={selectedImage.alt}  width={800} height={400} priority />
         </Box>
       </Box>
       <CardContent sx={{ gap: 1.5,width:'100%'}}>
         <CardContent>
           <Typography variant="h3" gutterBottom style={{ fontSize: "40px", fontWeight: "bold", color: "#00B4D8" ,marginBottom:'2rem',textAlign:'center'}}>
            {product.price}
+          </Typography>
+          <Typography variant="h3" gutterBottom style={{ fontSize: "40px", fontWeight: "bold",marginBottom:'2rem',textAlign:'center'}}>
+          Personalize Your Card
           </Typography>
           <Grid container spacing={2} justifyContent="center">
             <Grid item xs={12} md={6}>
@@ -476,14 +480,14 @@ const CustomBusinessCards = ({ product }) => {
                 sx={{
                   mb: 2.5,
                   fontWeight: '900',
-                  textTransform: 'uppercase',
-                  fontSize: '1rem',
+                 
+                  fontSize: '20px',
                   color:'black',
                   textAlign:'start'
                   // letterSpacing: '0.1em',
                 }}
               >
-                Card Color
+                Font Color
               </Typography>
               <RadioGroup
                 aria-labelledby="product-color-attribute"
@@ -497,7 +501,9 @@ const CustomBusinessCards = ({ product }) => {
                     control={
                       <Radio
                         icon={<span style={{ width: 35, height: 35, borderRadius: '50%', border: '2px solid black', backgroundColor: color.bgColor }} />}
-                        checkedIcon={<Done fontSize="xl2" style={{ color: color.bgColor }} />}
+                        checkedIcon={<Done  fontSize="xl2" style={{
+                          backgroundColor: color.bgColor,  color:color.colour ,fontSize:35, border:'2px solid black',borderRadius:'50%'}} /> }
+                        sx={{ '&:hover': { backgroundColor: 'transparent' } }}
                       />
                     }
                     label=""
@@ -505,16 +511,16 @@ const CustomBusinessCards = ({ product }) => {
                 ))}
               </RadioGroup>
               <br />
-              <TextField fullWidth label="Name of your Business" variant="outlined" margin="normal" />
-              <TextField fullWidth label="Address of your Business" variant="outlined" margin="normal" />
-              <FormControl fullWidth variant="outlined" margin="normal">
+              <TextField fullWidth label="Your Name" variant="outlined" margin="normal" />
+              <TextField fullWidth label="Title" variant="outlined" margin="normal"  />
+              {/* <FormControl fullWidth variant="outlined" margin="normal">
                 <InputLabel>Select Card Pack</InputLabel>
                 <Select value={quantity} onChange={handleQuantityChange} label="Select Card Pack">
                   <MenuItem value={1}>Single Pack</MenuItem>
                   <MenuItem value={5}>5-Pack</MenuItem>
                   <MenuItem value={10}>10-Pack</MenuItem>
                 </Select>
-              </FormControl>
+              </FormControl> */}
               <Box my={2}>
                 <Button variant="outlined" component="label" fullWidth sx={{ border: '1px solid grey', color: 'grey' }}>
                   <AddPhotoAlternateIcon sx={{ margin: '12px' }} />
@@ -550,6 +556,7 @@ const CustomBusinessCards = ({ product }) => {
               width: '30vw',
               padding: '1rem',
               mx: 'auto',
+              marginBottom:'2rem',
               backgroundColor: "#00B4D8",
                   color:'white',
                   fontSize:'20px',
@@ -577,7 +584,11 @@ padding: '0.5rem',
       marginTop: '2rem'
     }}>
       <h2 style={{ fontSize: '70px', fontWeight: 'bold' ,marginBottom:'2rem'}}>Description</h2>
-      <Typography sx={{ fontSize: '30px', width: '100vw', marginBottom: '5rem'}} className="DescriptionP">Want more reviews from happy customers? Just have them tap or scan the QR code and take them directly to your Google Review Profile. Get more positive feedback instantly. You do not have to do anything . We will configure the card for you with the Google Review link of your business. No Profile creation or any account management
+      <Typography sx={{ fontSize: '30px', width: '100vw', marginBottom: '5rem'}} className="DescriptionP">Power, Strength, Authority, Sophistication, and Elegance. You can convey all of that and more with the mTap Black Custom Digital Business Card. 
+
+mTap Black Custom Digital Business Cards enable you to add your name and title, then link to a customizable digital profile with links to all of your most vital business information, including your contact information, website, videos, social media, calendar and much, much more.
+
+Convey your power, authority, elegance and more with mTap Black Custom Digital Business Cards. These cards enable you to add your name and title, then link to a customizable digital profile with links to all of your most vital business information, including your contact information, website, videos, social media, calendar and much, much more.
 </Typography>
     </Box>
     <Box sx={{
@@ -587,16 +598,16 @@ padding: '0.5rem',
     }}>
       <h2 style={{ fontSize: '70px', fontWeight: 'bold', marginBottom: '1rem' }}>FAQ</h2>
       {accordionData.map((item, index) => (
-        <Accordion key={index} defaultExpanded={index === 0} sx={{ marginBottom: '2rem', padding: '2rem' }}>
+        <Accordion key={index} expanded={expanded === index}  onChange={handleChange(index)} sx={{ marginBottom: '2rem', padding: '2rem' ,borderRadius:'40px'}}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ fontSize: 40 }} />}
+        expandIcon={expanded === index ? <RemoveIcon sx={{ fontSize: 60,color:'black' }} /> : <AddIcon sx={{ fontSize: 60,color:'black'  }} />}
             aria-controls={`panel${index + 1}-content`}
             id={`panel${index + 1}-header`}
           >
-            <Typography sx={{ fontSize: '30px', fontWeight: 600 }}>{item.question}</Typography>
+            <Typography sx={{ fontSize: '30px', fontWeight: 600 ,padding:'1rem'}}>{item.question}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography sx={{ fontSize: '30px' }}>
+            <Typography sx={{ fontSize: '30px',padding:'1rem' }}>
               {item.answer}
             </Typography>
           </AccordionDetails>

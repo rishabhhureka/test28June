@@ -92,7 +92,7 @@ import Link from 'next/link';
   };
   
 const ProductDetailComponent = ({ product }) => {
-    const [quantity, setQuantity] = useState(1);
+  const [expanded, setExpanded] = useState(0);
     const [count, setCount] = useState(1);
     const generateBreadcrumbSchema = () => {
       return {
@@ -204,8 +204,10 @@ const ProductDetailComponent = ({ product }) => {
       }
     };
   
-    const handleQuantityChange = (event) => {
-      setQuantity(event.target.value);
+
+
+    const handleChange = (panel) => (event, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
     };
     const faqScript = `{
         "@context": "https://schema.org",
@@ -413,8 +415,8 @@ const ProductDetailComponent = ({ product }) => {
 
     <Card
       size="lg"
-      variant="outlined"
-      orientation="horizontal"
+      // variant="outlined"
+      // orientation="horizontal"
       sx={{
         display: 'flex',
         justifyContent: 'start',
@@ -431,7 +433,9 @@ const ProductDetailComponent = ({ product }) => {
       }}
     >
       <Box sx={{ display: 'flex'  }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '4rem' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '4rem' ,'@media screen and (max-width: 768px)': {
+        margin:0
+        }}}>
           {images.map((image, index) => (
             <Box
               className="reviewCardSmallBox"
@@ -444,6 +448,7 @@ const ProductDetailComponent = ({ product }) => {
                 border: `2px solid ${selectedImage === image ? 'black' : '#ccc'}`, // Conditional border
                 borderRadius: '8px',
                 overflow: 'hidden',
+                
               }}
               onClick={() => setSelectedImage(image)}
             >
@@ -470,62 +475,16 @@ const ProductDetailComponent = ({ product }) => {
       </Box>
       <CardContent sx={{ gap: 1.5,width:'100%'}}>
         <CardContent>
-          <Typography variant="h3" gutterBottom style={{ fontSize: "40px", fontWeight: "bold", color: "#00B4D8" ,marginBottom:'2rem',textAlign:'center'}}>
+        
+          <Typography variant="h3" gutterBottom sx={{ fontSize: "50px", fontWeight: "bold", color: "#00B4D8" ,marginBottom:'2rem',textAlign:'start'}}>
            {product.price}
           </Typography>
-          <Grid container spacing={2} justifyContent="center">
+       
+          <Grid container spacing={2} justifyContent="start" sx={{   '@media screen and (max-width: 768px)': {
+            justifyContent:'center'
+            }}}>
             <Grid item xs={12} md={6}>
-              <Typography
-                id="product-color-attribute"
-                sx={{
-                  mb: 2.5,
-                  fontWeight: '900',
-                  textTransform: 'uppercase',
-                  fontSize: '1rem',
-                  color:'black',
-                  textAlign:'start'
-                  // letterSpacing: '0.1em',
-                }}
-              >
-                Card Color
-              </Typography>
-              <RadioGroup
-                aria-labelledby="product-color-attribute"
-                defaultValue="black"
-                sx={{ gap: 2, flexWrap: 'wrap', flexDirection: 'row' }}
-              >
-                {colors.map((color) => (
-                  <FormControlLabel
-                    key={color.name}
-                    value={color.name}
-                    control={
-                      <Radio
-                        icon={<span style={{ width: 35, height: 35, borderRadius: '50%', border: '2px solid black', backgroundColor: color.bgColor }} />}
-                        checkedIcon={<Done fontSize="xl2" style={{ color: color.bgColor }} />}
-                      />
-                    }
-                    label=""
-                  />
-                ))}
-              </RadioGroup>
-              <br />
-              <TextField fullWidth label="Name of your Business" variant="outlined" margin="normal" />
-              <TextField fullWidth label="Address of your Business" variant="outlined" margin="normal" />
-              <FormControl fullWidth variant="outlined" margin="normal">
-                <InputLabel>Select Card Pack</InputLabel>
-                <Select value={quantity} onChange={handleQuantityChange} label="Select Card Pack">
-                  <MenuItem value={1}>Single Pack</MenuItem>
-                  <MenuItem value={5}>5-Pack</MenuItem>
-                  <MenuItem value={10}>10-Pack</MenuItem>
-                </Select>
-              </FormControl>
-              <Box my={2}>
-                <Button variant="outlined" component="label" fullWidth sx={{ border: '1px solid grey', color: 'grey' }}>
-                  <AddPhotoAlternateIcon sx={{ margin: '12px' }} />
-                  Upload Business Logo
-                  <input type="file" hidden />
-                </Button>
-              </Box>
+       
               <Box display="flex" alignItems="center" border={1} borderRadius={10} padding={1} sx={{ width: 'fit-content', marginTop: '2rem', marginBottom: '2rem' }}>
                 <IconButton onClick={handleDecrement} aria-label="decrement">
                   <RemoveIcon />
@@ -542,8 +501,10 @@ const ProductDetailComponent = ({ product }) => {
         </CardContent>
         <Box sx={{
           display: 'flex',
-          justifyContent:'center',
-     
+          justifyContent:'start',
+          '@media (max-width: 768px)': {
+         textAlign:'start'
+            }
         }}>
         <Link href="/cart"    className='AddToCartButton'>
           <Button
@@ -593,16 +554,16 @@ Powered by
     }}>
       <h2 style={{ fontSize: '70px', fontWeight: 'bold', marginBottom: '1rem' }}>FAQ</h2>
       {accordionData.map((item, index) => (
-        <Accordion key={index} defaultExpanded={index === 0} sx={{ marginBottom: '2rem', padding: '2rem' }}>
+        <Accordion key={index} expanded={expanded === index}  onChange={handleChange(index)} sx={{ marginBottom: '2rem', padding: '2rem' ,borderRadius:'40px'}}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ fontSize: 40 }} />}
+        expandIcon={expanded === index ? <RemoveIcon sx={{ fontSize: 60,color:'black' }} /> : <AddIcon sx={{ fontSize: 60,color:'black'  }} />}
             aria-controls={`panel${index + 1}-content`}
             id={`panel${index + 1}-header`}
           >
-            <Typography sx={{ fontSize: '30px', fontWeight: 600 }}>{item.question}</Typography>
+            <Typography sx={{ fontSize: '30px', fontWeight: 600 ,padding:'1rem'}}>{item.question}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography sx={{ fontSize: '30px' }}>
+            <Typography sx={{ fontSize: '30px',padding:'1rem' }}>
               {item.answer}
             </Typography>
           </AccordionDetails>

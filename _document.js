@@ -10,10 +10,10 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/mtapLogo.png" />
           <link rel="canonical" href="https://mtap.byklabs.store/" />
-          <link rel="preload" href="/globals.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript>
+          {/* <link rel="preload" href="/globals.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" /> */}
+          {/* <noscript>
             <link rel="stylesheet" href="/globals.css" />
-          </noscript>
+          </noscript> */}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <body >

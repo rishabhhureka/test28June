@@ -152,12 +152,15 @@ const ReviewCards = () => {
                 <div key={product.id} className="group relative">
                   <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-white-200  lg:aspect-none group-hover:opacity-75 lg:h-100">
                     <Image
-                      height={100}
-                      objectFit="cover"
-                      loading="eager"
+                    src={product.imageSrc}
+                    width={800}
+                    height={800}
+                   alt={product.imageAlt}
+                     
                       quality={100}
                       priority
                       className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                    
                     />
                   </div>
                   <div className="mt-16 mb-16 flex justify-center">

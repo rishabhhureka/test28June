@@ -89,7 +89,10 @@ const productData = {
 
 const RetailSolutions = ({ product }) => {
   const [count, setCount] = useState(1);
-
+  const [expanded, setExpanded] = useState(0);
+    const handleChange = (panel) => (event, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
+    };
   const images = product.images.map((image, index) => ({
     src: image.src,
     alt: product.name,
@@ -641,25 +644,20 @@ useEffect(() => {
             FAQ
           </h2>
           {accordionData.map((item, index) => (
-            <Accordion
-              key={index}
-              defaultExpanded={index === 0}
-              sx={{ marginBottom: "2rem", padding: "2rem" }}
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ fontSize: 40 }} />}
-                aria-controls={`panel${index + 1}-content`}
-                id={`panel${index + 1}-header`}
-              >
-                <Typography sx={{ fontSize: "30px", fontWeight: 600 }}>
-                  {item.question}
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography sx={{ fontSize: "30px" }}>{item.answer}</Typography>
-              </AccordionDetails>
-            </Accordion>
-          ))}
+        <Accordion key={index} expanded={expanded === index}  onChange={handleChange(index)} sx={{ marginBottom: '2rem', padding: '2rem' ,borderRadius:'40px'}}>
+          <AccordionSummary
+        expandIcon={expanded === index ? <RemoveIcon sx={{ fontSize: 60,color:'black' }} /> : <AddIcon sx={{ fontSize: 60,color:'black'  }} />}
+            aria-controls={`panel${index + 1}-content`}
+            id={`panel${index + 1}-header`}
+          >
+            <Typography sx={{ fontSize: '30px', fontWeight: 600 ,padding:'1rem'}}>{item.question}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography sx={{ fontSize: '30px',padding:'1rem' }}>
+              {item.answer}
+            </Typography>
+          </AccordionDetails>
+        </Accordion>))}
         </Box>
       </Card>
     </>

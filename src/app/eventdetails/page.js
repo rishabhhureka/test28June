@@ -270,8 +270,7 @@ export default function EventDetails() {
           <Image
             src={EventsPage}
             alt="Star Background"
-            layout="fill"
-            objectFit="cover"
+            // layout="fill"
             quality={100}
             loading="eager"
             priority
@@ -562,8 +561,7 @@ export default function EventDetails() {
                 <Image
                   src={imageUrl}
                   alt="Gallery Image"
-                  width={400}
-                  height={300}
+               
                   style={{ width: "100%", height: "auto" }}
                 />
               </Grid>

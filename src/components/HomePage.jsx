@@ -16,7 +16,7 @@ import googleReviewCards from "../Img/img-list3.38c9d6de.webp"
  import googlePlayIcon from "../Img/gplay.a3ac839e.png"
 import appleStoreIcon from "../Img/appstore.2edc0e95.png"
 import personalizeProfileCard from "../Img/block.4c7538ef.webp"
-
+import Link from 'next/link';
 
 const AccordionItem = ({ question, answer, isOpen, onClick }) => (
     <div className={isOpen ? 'open accordion-group' : 'close accordion-group'}>
@@ -195,7 +195,7 @@ export default function HomePage() {
                                 
                                     <Image
                                         src={followUpCard}
-                                        alt=""
+                                        alt="followUpCard"
                                         // width={500}
                                         // height={300}
                                         priority
@@ -228,7 +228,7 @@ export default function HomePage() {
                                     {/* Next.js Image for optimized image loading */}
                                     <Image
                                         src={createProfileCard}
-                                        alt=""
+                                        alt="createProfileCard"
                                         // width={600}
                                         // height={300}
                                     />
@@ -254,7 +254,7 @@ export default function HomePage() {
                                     {/* Next.js Image for optimized image loading */}
                                     <Image
                                         src={customBrandingCard}
-                                        alt=""
+                                        alt="custom branding card"
                                         width={400}
                                         height={300}
                                     />
@@ -280,7 +280,7 @@ export default function HomePage() {
                                     {/* Next.js Image for optimized image loading */}
                                     <Image
                                         src={connectTeamCard}
-                                        alt=""
+                                        alt="connectTeamCard"
                                         width={600}
                                         height={300}
                                     />
@@ -352,7 +352,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="btn-center">
-                    <a href="#" className="regular-btn" aria-label="Get Started Now">View All Products</a>
+                    <Link href="/shop-nfc" className="regular-btn" aria-label="Get Started Now">View All Products</Link>
                 </div>
         </section>
         <section className="business-card getting-started row-block">
@@ -426,7 +426,7 @@ export default function HomePage() {
                         <i>
                             <Image
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA7CAYAAADFJfKzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQ+SURBVHgB7ZtBSBRRGMe/NaHIoK1EKcjGQiiIdL2FHdaDdnQ7FoKChyKIoKBuuR0LQr3ZIUy0PLp71cCNrGOu0qEI23EXDEVyDd0Kktf3zZtZZndnd2edmbezmz/4dmZnH7vz3++97/vevBkPOARjTMKNH60Vjfbb0LyqaSTRZHUbVW3R4/FEwe2gQD/aENoms0YMbYy+D9wEnpAXbdAGgYWE9zHeU6pWpJHoQRAN4901xspDDK0PnIZxbw4xd0Dn4S3l/D1mGzI+ZuaAR1a3IKN1YvSWzTSuMdMIhVLacJtQQkKbU8+vKEU9qxNaUpcRDOXpzmL5uaDYChGqUVRwXrEuHaPFkKHAGDYUq0a5BagsoRoymg8FJ7M/yBegKHlLUJlIwM8/hxzPolf7cTMGlQ9154j+gJHYGDjg1S8/lyAUn4T4zjKk/u7A4do6OH/0EnQ0dEP78cvgADJkdecMsYzXnkGwERI2FRuF+fXZvG26TwXgevMtcIDHKDaovUmLdSr6TsWew8zqtLJPnvShF5vqzikefr/+RtkSVxq6YKDlPtgMebU5J1jRWGU2825thvXPX1VsemXCsA0d19rMY3sHCGoa9dHY9unT7GpI2ZLXAk29hm3oePsJPmYLdXUL3NV2FLGMXxGQwEZorGpdtAPFFqLr5DVl+3lrCTb+rIHNeFV9ac/aPj9MpJbT+zRWC6H/fOO37WKJAL1oYv1Q3SjOrGG82JeguqGuLJFnTc0FqwB/LVgUS4Fo9vt0zlhL7W6n9198fQZmCScmMf82Zhw7fOAI9GDUpqrLAm0edC8VEn7YIyTEoZSRAQWxhxefggXC1I0tTcxFCCUoLVmklcRK8H/gtezZCsJbCwKhSimgBhqqlMI45RM1DAhTl1LtgOrjG2dvpiNq/cFGZZZTrLqyExKbBAHkq497TveCIJLCxNYfaizpuAPIJFbIwm98e9nweGL7Gwhii8SugADCiVdKtaWH3r+WR0EQUXGexbntYPQ2brknKRo/+fTAqSmdEQskNgKCIIEJdUJPFZE2uRfEYo26VCAkSJURmdaAtDw7DtVNhF40sSEQRGqXB6lfuimgABRnKuUiLRPgVI+6suN1cig+oaShjz8+gCBkbRlEXy6OgAAo3VA9nJ2GHCSo7ejFDkP1BSoZ7a32Ji1WXSIo2bu0lCECmjjsgXH9wnT2rIe8K0MJDLTcc7y+pT/0zoVHUCKyflGLMFqy9ANf4Kp0+lFsRkrNmc+qkUtIsHKQkWyhxP49FWrDTihx/LoAGfjtBYZZZf8+KD0VItjUHW5FL7ipX+DmLi2DCaHE/l2pRqhf6AP3pCU6D59ZoXuG8ZtNYqw8xFg5HpTAHw0ycaI31d8rX6DEH5eYs54uv0gjGH9Q4qUNwkngMLO5u5qOxqXCeH7WjJ7aOoZ2BnKf2NoCXprS9WtKHxGngs4//xYhEg+jSEIAAAAASUVORK5CYII="
-                                alt=""
+                                alt="image"
                                 height={60} width={60}
                                
                             />

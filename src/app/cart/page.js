@@ -4,7 +4,7 @@ import { Box, Button, Grid, Paper, Table, TableBody, TableCell, TableContainer, 
 import Image from 'next/image';
 import productImg from "../../Img/GoogleReviewCard.png"
 import blackMetal from "../../Img/MetalCard4.png";
-import paperCard from "../../Img/customCard.gif"
+import paperCard from "../../Img/PaperCard.jpg"
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';

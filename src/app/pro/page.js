@@ -77,7 +77,7 @@ export default function Pro() {
             src={star}
             alt="Star Background"
             layout="fill"
-            objectFit="cover"
+           
             loading="eager"
             quality={100}
             priority
