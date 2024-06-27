@@ -236,9 +236,9 @@ const CustomDigitalBusinessCards = () => {
                     <Image
                       src={product.imageSrc}
                       alt={product.imageAlt}
-                      width={100}
-                      height={100}
-                      objectFit="cover"
+                      width={800}
+                      height={800}
+                   
                       loading="eager"
                       quality={100}
                       priority

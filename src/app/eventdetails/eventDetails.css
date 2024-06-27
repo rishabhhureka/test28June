@@ -6,13 +6,21 @@
   }
   
   .star-background {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: -1;
     /* margin-bottom: -6rem; */
+  }
+  .star-background img{
+    position: absolute;
+    object-fit: cover; position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 .text-animated-block{
     margin: 0 !important;
@@ -110,8 +118,9 @@ margin-bottom: 2rem;
       margin-right: 2rem !important;
 }
 .imageGrid img{
-height: 80vh !important;
+height: 70vh !important;
 border-radius: 90px;
+width: 50vw !important;
 padding: 2rem;
 }
 .allEvents{

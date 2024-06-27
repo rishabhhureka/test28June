@@ -93,7 +93,10 @@ import Link from 'next/link';
 const KeyFobs = ({ product }) => {
   
     const [count, setCount] = useState(1);
-
+    const [expanded, setExpanded] = useState(0);
+    const handleChange = (panel) => (event, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
+    };
     const images = product.images.map((image, index) => ({ src: image.src, alt: product.name }));
       const [selectedImage, setSelectedImage] = useState(images[0]);
       const generateBreadcrumbSchema = () => {
@@ -534,16 +537,16 @@ padding: '0.5rem',
     }}>
       <h2 style={{ fontSize: '70px', fontWeight: 'bold', marginBottom: '1rem' }}>FAQ</h2>
       {accordionData.map((item, index) => (
-        <Accordion key={index} defaultExpanded={index === 0} sx={{ marginBottom: '2rem', padding: '2rem' }}>
+        <Accordion key={index} expanded={expanded === index}  onChange={handleChange(index)} sx={{ marginBottom: '2rem', padding: '2rem' ,borderRadius:'40px'}}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ fontSize: 40 }} />}
+        expandIcon={expanded === index ? <RemoveIcon sx={{ fontSize: 60,color:'black' }} /> : <AddIcon sx={{ fontSize: 60,color:'black'  }} />}
             aria-controls={`panel${index + 1}-content`}
             id={`panel${index + 1}-header`}
           >
-            <Typography sx={{ fontSize: '30px', fontWeight: 600 }}>{item.question}</Typography>
+            <Typography sx={{ fontSize: '30px', fontWeight: 600 ,padding:'1rem'}}>{item.question}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography sx={{ fontSize: '30px' }}>
+            <Typography sx={{ fontSize: '30px',padding:'1rem' }}>
               {item.answer}
             </Typography>
           </AccordionDetails>

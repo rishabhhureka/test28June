@@ -141,7 +141,7 @@ const Footer = () => (
   <div className="row">
                     <div className="copy">
                         <p className="mtapFooterImage"><Image src={mtapLogo}
-                                alt="" height={70} width={80} loading="lazy" /></p><br /> © 2023 by mTap Corporation. All Rights Reserved
+                                alt="mtapFooter" height={70} width={80} loading="lazy" /></p><br /> © 2023 by mTap Corporation. All Rights Reserved
                     </div>
                 </div>
 </footer>

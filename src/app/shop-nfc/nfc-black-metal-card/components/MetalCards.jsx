@@ -403,7 +403,7 @@ const MetalCards = ({ product }) => {
           </Breadcrumbs>
         </div>
         
-    <h1 className="googleReviewCardsHeading" style={{ fontSize: '68px', fontWeight: "600", textAlign: 'center' ,marginBottom:'1rem'}}>{product.name}</h1>
+    <h1 className="googleReviewCardsHeading" style={{ fontSize: '68px', fontWeight: "600", textAlign: 'center' ,marginTop:'2rem',marginBottom:'2rem'}}>{product.name}</h1>
 
     <Card
       size="lg"
@@ -443,7 +443,7 @@ const MetalCards = ({ product }) => {
               }}
               onClick={() => setSelectedImage(image)}
             >
-              <Image src={image.src} alt={image.alt} width={120} height={80} loading="eager" priority />
+              <Image src={image.src} alt={image.alt} width={120} height={80}  priority />
             </Box>
           ))}
         </Box>
@@ -461,7 +461,7 @@ const MetalCards = ({ product }) => {
             }
           }}
         >
-          <Image src={selectedImage.src} alt={selectedImage.alt} loading="eager" width={800} height={400} priority />
+          <Image src={selectedImage.src} alt={selectedImage.alt}  width={800} height={400} priority />
         </Box>
       </Box>
       <CardContent sx={{ gap: 1.5,width:'100%'}}>
@@ -497,15 +497,15 @@ const MetalCards = ({ product }) => {
               </RadioGroup> */}
               <br />
               <TextField fullWidth label="Name of your Business" variant="outlined" margin="normal" />
-              <TextField fullWidth label="Address of your Business" variant="outlined" margin="normal" />
-              <FormControl fullWidth variant="outlined" margin="normal">
+              <TextField fullWidth label="Title" variant="outlined" margin="normal" />
+              {/* <FormControl fullWidth variant="outlined" margin="normal">
                 <InputLabel>Select Card Pack</InputLabel>
                 <Select value={quantity} onChange={handleQuantityChange} label="Select Card Pack">
                   <MenuItem value={1}>Single Pack</MenuItem>
                   <MenuItem value={5}>5-Pack</MenuItem>
                   <MenuItem value={10}>10-Pack</MenuItem>
                 </Select>
-              </FormControl>
+              </FormControl> */}
               <Box my={2}>
                 <Button variant="outlined" component="label" fullWidth sx={{ border: '1px solid grey', color: 'grey' }}>
                   <AddPhotoAlternateIcon sx={{ margin: '12px' }} />
@@ -541,6 +541,7 @@ const MetalCards = ({ product }) => {
               width: '30vw',
               padding: '1rem',
               mx: 'auto',
+              marginBottom:'2rem',  
               backgroundColor: "#00B4D8",
                   color:'white',
                   fontSize:'20px',

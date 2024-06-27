@@ -174,8 +174,7 @@ Ensure your contacts never lose you with mTap Digital Business Fobs.
                       alt={product.imageAlt}
                       width={100}
                       height={100}
-                      objectFit="cover"
-                      loading="eager"
+                   loading="eager"
                       quality={100}
                       priority
                       className="h-full w-full object-cover object-center lg:h-full lg:w-full"

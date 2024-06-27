@@ -138,7 +138,7 @@ const MetalCards = () => {
                       alt={product.imageAlt}
                       width={100}
                       height={100}
-                      objectFit="cover"
+                     
                       loading="eager"
                       quality={100}
                       priority

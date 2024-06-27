@@ -174,7 +174,6 @@ export default function EventDetails() {
             src={EventsPage}
             alt="Star Background"
             layout="fill"
-            objectFit="cover"
             quality={100}
             loading="eager"
             priority

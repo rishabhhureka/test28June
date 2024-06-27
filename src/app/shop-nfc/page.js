@@ -212,14 +212,12 @@ export default function Shop_NFC() {
             {products.map((product) => (
               <div key={product.id} className="group relative">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-white-200  lg:aspect-none group-hover:opacity-75 lg:h-100">
-                  <img
+                  <Image
                     src={product.imageSrc}
                     alt={product.imageAlt}
-                    width={100}
-                    height={100}
-                    // objectFit="cover"
-                    loading="eager"
-                    // quality={100}
+                    width={800}
+                    height={800}
+                    
                     priority
                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                   />
@@ -285,7 +283,7 @@ export default function Shop_NFC() {
                     alt={product.imageAlt}
                     width={100}
                     height={100}
-                    // objectFit="cover"
+                 
                     loading="eager"
                     // quality={100}
                     priority

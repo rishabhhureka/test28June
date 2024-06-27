@@ -93,7 +93,10 @@ import Link from 'next/link';
 const GoogleReviewCardProduct = ({ product }) => {
     const [quantity, setQuantity] = useState(1);
     const [count, setCount] = useState(1);
-
+    const [expanded, setExpanded] = useState(0);
+    const handleChange = (panel) => (event, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
+    };
     const images = [
         { src: product.imageSrc, alt: product.name },
         { src: 'https://mtap-assets-prod.s3.amazonaws.com/s3fs-public/2024-04/Google-Review-Card-01.png', alt: 'Additional Image 1' },
@@ -186,12 +189,12 @@ const GoogleReviewCardProduct = ({ product }) => {
     };
   }, []);
 
-    const colors = [
-      { name: 'danger', bgColor: 'red' },
-      { name: 'white', bgColor: 'white' },
-      { name: 'black', bgColor: '#000' },
-      { name: 'primary', bgColor: 'blue' },
-    ];
+  const colors = [
+    { name: 'danger', bgColor: 'red',colour:'white' },
+    { name: 'white', bgColor: 'white',colour:'black' },
+    { name: 'black', bgColor: '#000',colour:'white' },
+    { name: 'primary', bgColor: 'blue' ,colour:'white'},
+  ];
   
     const handleIncrement = () => {
       setCount(count + 1);
@@ -506,9 +509,11 @@ const GoogleReviewCardProduct = ({ product }) => {
                     value={color.name}
                     control={
                       <Radio
-                        icon={<span style={{ width: 35, height: 35, borderRadius: '50%', border: '2px solid black', backgroundColor: color.bgColor }} />}
-                        checkedIcon={<Done fontSize="xl2" style={{ color: color.bgColor }} />}
-                      />
+                      icon={<span style={{ width: 35, height: 35, borderRadius: '50%', border: '2px solid black', backgroundColor: color.bgColor }} />}
+                      checkedIcon={<Done  fontSize="xl2" style={{
+                        backgroundColor: color.bgColor,  color:color.colour ,fontSize:35, border:'2px solid black',borderRadius:'50%'}} /> }
+                      sx={{ '&:hover': { backgroundColor: 'transparent' } }}
+                    />
                     }
                     label=""
                   />
@@ -549,7 +554,7 @@ const GoogleReviewCardProduct = ({ product }) => {
         <Box sx={{
           display: 'flex',
           justifyContent:'center',
-     
+
         }}>
         <Link href="/cart"    className='AddToCartButton'>
           <Button
@@ -559,6 +564,7 @@ const GoogleReviewCardProduct = ({ product }) => {
               borderRadius: 10,
               width: '30vw',
               padding: '1rem',
+              marginBottom:'2rem',
               mx: 'auto',
               backgroundColor: "#00B4D8",
                   color:'white',
@@ -570,6 +576,7 @@ color:'white',
 } ,'@media (max-width: 768px)': {
 maxWidth: '100vw',
 padding: '0.5rem',
+
 }
             }}
           >
@@ -597,16 +604,16 @@ padding: '0.5rem',
     }}>
       <h2 style={{ fontSize: '70px', fontWeight: 'bold', marginBottom: '1rem' }}>FAQ</h2>
       {accordionData.map((item, index) => (
-        <Accordion key={index} defaultExpanded={index === 0} sx={{ marginBottom: '2rem', padding: '2rem' }}>
+        <Accordion key={index} expanded={expanded === index}  onChange={handleChange(index)} sx={{ marginBottom: '2rem', padding: '2rem' ,borderRadius:'40px'}}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ fontSize: 40 }} />}
+        expandIcon={expanded === index ? <RemoveIcon sx={{ fontSize: 60,color:'black' }} /> : <AddIcon sx={{ fontSize: 60,color:'black'  }} />}
             aria-controls={`panel${index + 1}-content`}
             id={`panel${index + 1}-header`}
           >
-            <Typography sx={{ fontSize: '30px', fontWeight: 600 }}>{item.question}</Typography>
+            <Typography sx={{ fontSize: '30px', fontWeight: 600 ,padding:'1rem'}}>{item.question}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography sx={{ fontSize: '30px' }}>
+            <Typography sx={{ fontSize: '30px',padding:'1rem' }}>
               {item.answer}
             </Typography>
           </AccordionDetails>
